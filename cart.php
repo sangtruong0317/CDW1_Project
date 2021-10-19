@@ -24,7 +24,7 @@
                         <tbody>
                             <tr>
                                 <td class="cart_product">
-                                    <a href="#"><img style="width:150px;height:200px" src="images/" alt="" width=110></a>
+                                    <a href="#"><img style="width:150px;height;200px" src="images/" alt="" width=110></a>
                                 </td>
                                 <td class="cart_description">
                                     <h4><a href="#">Tên</a></h4>

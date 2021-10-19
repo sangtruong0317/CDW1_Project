@@ -63,21 +63,3 @@ style="background-color: #fff;">
 
 </body>
 </html>
-<?php
-if (isset($_POST['login'])){
-	$user_name = $_POST['UserName'];
-	$user_password = $_POST['Password'];
-	$role=1;
-	if($user->login($user_name, $user_password, $role)== true){
-		$_SESSION['admin_name']=$user_name;
-		echo "<script> alert('Xin chào $user_name');window.location.href='../admin/index.php'</script>";
-	}
-	else if($user->login($user_name, $user_password)==0){
-		$_SESSION['customer_name']=$user_name;
-		echo "<script> alert('Xin chào khách hàng $user_name');window.location.href='../index.php'</script>";
-	}
-	else{
-		echo "<script> alert('Tài khoản không đúng !! Vui lòng thử lại');window.location.href='index.php'</script>";
-	}
-} 
-?>
