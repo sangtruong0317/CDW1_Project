@@ -22,9 +22,27 @@ class Product extends Db
     
     //Viet phuong thuc lay ra san pham theo từ khóa (phân trang)
     
-    //Phân trang (Viết cái này trong DB nghe có vẻ hớp lý hơn ==')
+    //Phân trang
+    function paginate($url, $total, $page, $perPage)
+    {
+        $totalLinks = ceil($total / $perPage);
+        $link = "";
+        for ($j = 1; $j <= $totalLinks; $j++) {
+            $link = $link . "<a style='padding:20px;' href='$url?page=$j'> $j </a>";
+        }
+        return $link;
+    }
     
     //Phân trang cho trang Reasult
+    function paginateForResult($url, $total, $page, $perPage, $key)
+    {
+        $totalLinks = ceil($total / $perPage);
+        $link = "";
+        for ($j = 1; $j <= $totalLinks; $j++) {
+            $link = $link . "<a style='padding:20px;' href='$url?page=$j&key=$key'> $j </a>";
+        }
+        return $link;
+    }
     
     //Viet phuong thuc lay ra san pham theo manu_id
     

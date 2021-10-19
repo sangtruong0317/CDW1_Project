@@ -12,7 +12,7 @@
         ?>
 
      <body>
-         <?php require "./form/header-bottom.php";?>
+         <?php require "./form/header-bottom.php"; ?>
          <section>
              <div class="container body">
                  <div class="row">
@@ -36,125 +36,126 @@
                              <!--features_items-->
                              <h2 class="title text-center">Top Sản Phẩm Nổi Bật</h2>
                              <!-- Foreach here -->
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <a href="">
-                                                    <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                    <p><a class="name-products" href="detail.php">Tivi LG</a></p>
-                                                    <h2>11,290,000 VND</h2>
-                                                    <p></p>
-                                                    <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <a href="">
-                                                    <img class="hinhanh" src="./images/may-giat-lg-fv1409s2v-1-1-org.jpg" alt=""/>
-                                                    <p><a class="name-products" href="detail.php">Máy Giặt</a></p>
-                                                    <h2>13,200,000 VND</h2>
-                                                    <p></p>
-                                                    <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <a href="">
-                                                    <img class="hinhanh" src="./images/tu-lanh-panasonic-nr-bv280qsvn-2-org.jpg" alt=""/>
-                                                    <p><a class="name-products" href="detail.php">Tủ lạnh Panasonic</a></p>
-                                                    <h2>11,290,000 VND</h2>
-                                                    <p></p>
-                                                    <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <a href="">
-                                                    <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                    <p><a class="name-products" href="detail.php">Tivi LG</a></p>
-                                                    <h2>11,200,000 VND</h2>
-                                                    <p></p>
-                                                    <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/lg-4k-55.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Tivi LG</a></p>
+                                                 <h2>11,290,000 VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/may-giat-lg-fv1409s2v-1-1-org.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Máy Giặt</a></p>
+                                                 <h2>13,200,000 VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/tu-lanh-panasonic-nr-bv280qsvn-2-org.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Tủ lạnh Panasonic</a></p>
+                                                 <h2>11,290,000 VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/lg-4k-55.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Tivi LG</a></p>
+                                                 <h2>11,200,000 VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
                          </div>
 
                          <div class="new_items">
-                        <!--new_items-->
-                        <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="">
-                                                <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                <p><a class="name-products" href="detail.php">Tivi</a></p>
-                                                <h2>19,239,000 VND</h2>
-                                                <p></p>
-                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="">
-                                                <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                <p><a class="name-products" href="detail.php">Tivi</a></p>
-                                                <h2>19,239,000 VND</h2>
-                                                <p></p>
-                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="">
-                                                <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                <p><a class="name-products" href="detail.php">Tivi</a></p>
-                                                <h2>19,239,000VND</h2>
-                                                <p></p>
-                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                         <!--features_items-->
+                             <!--new_items-->
+                             <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/lg-4k-55.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Tivi</a></p>
+                                                 <h2>19,239,000 VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/lg-4k-55.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Tivi</a></p>
+                                                 <h2>19,239,000 VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-4">
+                                 <div class="product-image-wrapper">
+                                     <div class="single-products">
+                                         <div class="productinfo text-center">
+                                             <a href="">
+                                                 <img class="hinhanh" src="./images/lg-4k-55.jpg" alt="" />
+                                                 <p><a class="name-products" href="detail.php">Tivi</a></p>
+                                                 <h2>19,239,000VND</h2>
+                                                 <p></p>
+                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                             </a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <!--features_items-->
+                         </div>
                      </div>
-                 </div>
-        </section>
-         
-        
+         </section>
+         <!--paginate-->
+         <?php echo $product->paginate($url, $total, $page, $perPage) ?>
+
          <?php require "./form/footer.php"; ?>
          <?php require "./form/script.php"; ?>
      </body>
 
      </html>
-    </div>
+     </div>
