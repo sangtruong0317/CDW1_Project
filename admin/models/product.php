@@ -43,6 +43,33 @@ class Product extends Db
         return $items; //return an array	   
     }
 
+    //Viet phuong thêm 1 products
+    function addNewProduct($name, $manu_id, $type_id, $price, $pro_image, $description, $feature, $created_at)
+    {
+        $sql = self::$connection->prepare("INSERT INTO `products`(`name`, `manu_id`, `type_id`, `price`, `pro_image`, `description`, `feature`, `created_at`)
+        VALUES ('$name',$manu_id,$type_id, ? ,'$pro_image',' $description',$feature,'$created_at')");
+        $sql->bind_param("i", $price);
+        $sql->execute(); //return an object
+    }
+
+    //Viet phuong thuc sua products
+    function updateProduct($name, $manu_id, $type_id, $price, $pro_image, $description, $feature, $created_at,$id){
+        $query = self::$connection->prepare("UPDATE products SET name = ?,manu_id = ?,type_id = ?,
+        price = ?,pro_image = ?,description = ?,feature = ?,created_at=? WHERE id = ? ");
+        $query->bind_param("siiissisi",$name,$manu_id,$type_id,$price,$pro_image,$description,$feature,$created_at,$id);
+        return $query->execute();
+    }
+
+     //Viet phuong thuc xóa 1 products
+     function delProduct($id)
+     {
+         $sql = self::$connection->prepare("DELETE
+     FROM products
+     WHERE id = ?");
+         $sql->bind_param("i", $id);
+         $sql->execute(); //return an object
+     }
+
     //Viet phuong thuc lọc sản phẩm theo Manufactures
     function getProductsByManufacture($manu_id)
     {
