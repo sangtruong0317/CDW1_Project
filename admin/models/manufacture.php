@@ -25,5 +25,13 @@ class Manufacture extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array	   
     }
+    //Viet phuong thêm 1 Manufacture
+    function addNewManufacture($manu_name)
+    {
+        $sql = self::$connection->prepare("INSERT INTO `manufactures`(`manu_name`) 
+        VALUES (?)");
+        $sql->bind_param("s", $manu_name);
+        $sql->execute(); //return an object
+    }
     
 }
