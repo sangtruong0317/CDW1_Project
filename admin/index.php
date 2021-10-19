@@ -64,20 +64,20 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+                                    <?php foreach ($product->getAllProductsByPage($page, $perPage) as $value){?>
                                     <tr class="">
-                                        <td class="getId"></td>
-                                        <td width="250"><img src="../images/" />
+                                        <td class="getId"><?php echo $value['ID']?></td>
+                                        <td width="250"><img src="../images/<?= $value['pro_image']?>"/>
                                         </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><?php echo $value['name']?></td>
+                                        <td><?php echo $value['manu_name']?></td>
+                                        <td><?php echo $value['type_name']?></td>
+                                        <td><?php echo substr($value['description'],0,100)?>...</td>
+                                        <td><?php echo number_format($value['price'])?></td>
+                                        <td><?php echo $value['feature']?></td>
+                                        <td><?php echo $value['created_at']?></td>
                                         <td>
-                                            <a href="#" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
+                                            <a href="form.php?value=product" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
                                             <button type="button" style="height: 35px; width:86px; font-size: 15px; margin: 15px 5px 15px 25px" 
                                             class="btn btn-danger"
                                             data-toggle="modal" data-target="#delete">
@@ -86,8 +86,16 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                             <a href="#" class="btn btn-success" style="height: 25px; width:60px; font-size: 15px; margin: 0px 5px 0 25px">Sửa <i class="far fa-edit"></i></a>
                                         </td>
                                     </tr>
+                                    <?php }?>
                                 </tbody>
                             </table>
+                            <div class="row" style="margin-left: 18px;">
+                                <ul class="pagination">
+                                    <div class="active">
+                                        <?php echo $db->paginate($url,$total, $page, $perPage)?>
+                                    </div>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
