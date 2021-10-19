@@ -36,7 +36,7 @@
                              <!--features_items-->
                              <h2 class="title text-center">Top Sản Phẩm Nổi Bật</h2>
                              <!-- Foreach here -->
-                             <?php foreach ($product->getNewProducts() as $value) { ?>
+                             <?php foreach ($product->getFeatureProducts() as $value) { ?>
                                  <div class="col-sm-4">
                                      <div class="product-image-wrapper">
                                          <div class="single-products">
@@ -66,7 +66,7 @@
                         <!--new_items-->
                     <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
                         <?php
-                        foreach ($product->getFeatureProducts()as $value) {
+                        foreach ($product->getNewProducts()as $value) {
                         ?>
                             <div class="col-sm-4">
                             <div class="product-image-wrapper">
