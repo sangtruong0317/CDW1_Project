@@ -2509,7 +2509,7 @@ td.cart_total{
 }
 
 /*  */
-body {
+/* body {
     background: #ff5f6d;
     background: -webkit-linear-gradient(to right, #00001a, #00004d);
     background: linear-gradient(to right, #00001a, #00004d);
@@ -2546,4 +2546,4 @@ p {
 
 .lead {
     font-family: 'Sanchez 200', serif
-}
+} */
