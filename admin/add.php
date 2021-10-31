@@ -9,7 +9,7 @@
         $feature = $_POST['feature'];
         $created_at  = date("Y-m-d h:m:s");
         $path = "../images/" . basename($pro_image);
-       
+        //Kiểm tra ảnh có hợp k
         if(getimagesize($_FILES['fileUpload']['tmp_name'])){
             if(!file_exists($path)){
                 if(move_uploaded_file($_FILES['fileUpload']['tmp_name'],$path)){
