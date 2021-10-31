@@ -40,7 +40,7 @@
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <a href="detail.php">
+                                                <a href="">
                                                     <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
                                                     <p><a class="name-products" href="detail.php">Tivi LG</a></p>
                                                     <h2>11,290,000 VND</h2>

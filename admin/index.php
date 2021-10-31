@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require "./form/head.php"; ?>
-<?php
-$perPage = 6; 	//số lượng sản phẩm hiển thị trên 1 trang  
-$total = count($product->getAllProducts()); 	// Tính tổng số dòng
-?>
+
 <body>
     <?php require "./form/header_part.php"; ?>
     <?php require "./form/topHeaderMenu.php"; ?>
@@ -66,20 +63,20 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                 <tbody>
                                     
                                     <tr class="">
-                                        <td class="getId"></td>
-                                        <td width="250"><img src="../images/" />
+                                        <td class="getId">1</td>
+                                        <td width="250"><img class="hinhanh" src="./images/tu-lanh-panasonic-nr-bv280qsvn-2-org.jpg" alt=""/>
                                         </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>Tu Lanh Panasonic</td>
+                                        <td>Panasonic</td>
+                                        <td>Tu Lanh</td>
+                                        <td> Lanh Panasonic...</td>
+                                        <td>12 990 000 VNĐ</td>
                                         <td></td>
                                         <td></td>
                                         <td>
                                             <a href="#" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
                                             <button type="button" style="height: 35px; width:86px; font-size: 15px; margin: 15px 5px 15px 25px" 
-                                            class="btn btn-danger"
+                                            class="btn btn-danger" onclick=""
                                             data-toggle="modal" data-target="#delete">
                                                 Xóa <i class="fas fa-trash-alt"></i>
                                             </button>

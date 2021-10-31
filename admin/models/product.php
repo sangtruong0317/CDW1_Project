@@ -13,4 +13,29 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    //Viet phuong thuc lay ra tat ca san pham
+    
+
+    //Viết phương thức lấy ra danh sách tất cả sản phẩm
+    
+
+    //Viet phuong thêm 1 products
+    
+
+    //Viet phuong thuc sua products
+    
+
+     //Viet phuong thuc xóa 1 products
+     
+
+    //Viet phuong thuc lọc sản phẩm theo Manufactures
+    
+    //Viet phuong thuc lọc sản phẩm theo Protype
+    function getProductsByProtype($type_id)
+    
+    
+    
+
+    //Phân trang
+    
 }
