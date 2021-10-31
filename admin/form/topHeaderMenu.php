@@ -4,7 +4,7 @@
     border-left: none">
             <li class="dropdown" id="profile-messages"><a title="" href="#" data-toggle="dropdown" style="border: none;color: #fff; font-size: 15px"
                     data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i> <span
-                        class="text"><?= $_SESSION['admin_name']?></span><b class="caret"></b></a>
+                        class="text"></span><b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="icon-user"></i>Thông tin</a></li>
                     <li class="divider"></li>

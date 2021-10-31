@@ -117,16 +117,16 @@ hr{ border-top-color:#dadada;}
 	display: block;
 	font-size: 11px;
 }
-#user-nav > ul > li > a:hover, #user-nav > ul > li.open > a {
+/* #user-nav > ul > li > a:hover, #user-nav > ul > li.open > a {
 	color: #ffffff;  background:#000;
-}
+} */
 #user-nav > ul > li > a > i, #sidebar li a i {
 	opacity: .5; 
 	margin-top: 2px;
 }
-#user-nav > ul > li > a:hover > i, #user-nav > ul > li.open > a > i {
+/* #user-nav > ul > li > a:hover > i, #user-nav > ul > li.open > a > i {
 	opacity: 1;
-}
+} */
 #user-nav > ul > li > a > .label {
 	vertical-align: middle;
 	padding: 1px 4px 1px;
@@ -136,8 +136,8 @@ hr{ border-top-color:#dadada;}
 #user-nav > ul ul > li > a {
 	text-align: left;
 }
-#user-nav > ul ul > li > a:hover {
-}
+/* #user-nav > ul ul > li > a:hover {
+} */
 /* Sidebar Navigation */
 #sidebar {
 	display: block;

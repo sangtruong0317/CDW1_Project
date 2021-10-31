@@ -57,32 +57,22 @@ $total = count($protype->getAllProtype()); 	// Tính tổng số dòng
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($protype-> getAllProtypeByPage($page, $perPage) as $value){?>
                                     <tr class="">
-                                        <td><?php echo $value['type_id']?></td>
-                                        <td><?php echo $value['type_name']?></td>
+                                        <td></td>
+                                        <td></td>
 
                                         <td>
-                                            <a href="form.php?value=protype" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
-                                            <button type="button" class="btn btn-danger" 
-                                            onclick="deleteProId(<?= $value['type_id'] ?>)" 
+                                            <a href="#" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
+                                            <button type="button" class="btn btn-danger"  
                                             data-toggle="modal" data-target="#delete"
                                             style="margin: 0 20px 0 20px">
                                                     Xóa <i class="fas fa-trash-alt"></i>
                                             </button>
-                                            <a href="edit.php?idProtype=<?= $value['type_id'] ?>&editProtype" class="btn btn-success">Sửa <i class="far fa-edit"></i></a>
+                                            <a href="#" class="btn btn-success">Sửa <i class="far fa-edit"></i></a>
                                         </td>
                                     </tr>
-                                    <?php }?>
                                 </tbody>
                             </table>
-                            <!-- <div class="row" style="margin-left: 18px;">
-                                <ul class="pagination">
-                                <div class="active">
-                                        <?php echo $db->paginate($url,$total, $page, $perPage)?>
-                                </div>
-                                </ul>
-                            </div> -->
                         </div>
                     </div>
                 </div>

@@ -53,24 +53,6 @@ color:yellowgreen;
 	</div>
 	<div class="clear"></div>
 </div>
-<p class="copyright w3l">© 2017 Official Signup Form. All Rights Reserved | Design by Nhóm 11</a></p>
+<p class="copyright w3l">Design by Group G</a></p>
 </body>
 </html>
-<?php 
- require '../admin/config.php';
- require '../admin/models/db.php';
- require '../admin/models/user.php';
-if(isset($_POST['register'])){
-	$user =new User;
-	$username=$_POST['name'];
-	$pass = $_POST['password'];
-	$role=0;
-	 if($user->register($username,$pass,$role)==false){
-	 	echo "<script> alert('Tên tài khoản đã tồn tại!!')</script>";
-	 }
-	 else {
-	 	echo "<script> alert('Đăng ký thành công!!');
-	 	window.location.href='../Login/index.php'</script>";
-	 }
-}
-?>
