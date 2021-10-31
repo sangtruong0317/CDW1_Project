@@ -25,6 +25,21 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    function getAllProductsByPage($page, $perPage)
+    {
+        // Tính số thứ tự trang bắt đầu  
+        $firstLink = ($page - 1) * $perPage;
+        //Dùng LIMIT để giới hạn số lượng hiển thị 1 trang 
+        $sql = self::$connection->prepare("SELECT * 
+    FROM products,manufactures,protypes 
+    WHERE products.manu_id = manufactures.manu_id and products.type_id = protypes.type_id
+    ORDER BY products.id DESC
+    LIMIT $firstLink, $perPage");
+        $sql->execute(); //return an object	 
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array	   
+    }
 
     //Viết phương thức lấy ra danh sách tất cả sản phẩm
     
