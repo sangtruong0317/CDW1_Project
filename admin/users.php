@@ -33,12 +33,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php foreach($user->getAccount() as $value){?>
                                     <tr class="">
-                                        <td></td>
-                                        <td></td>
-                                        <td><input style="border:none;" type="password" name="" value="password" disabled id=""><td>
-                                        <td></td>
+                                        <td><?= $value['user_id']?></td>
+                                        <td><?= $value['name']?></td>
+                                        <td><input style="border:none;" type="password" name="" value="<?= $value['password'] ?>" disabled id=""><td>
+                                        <td><?= $value['role']?></td>
                                     </tr>
+                                    <?php }?>
                                 </tbody>
                             </table>
                             

@@ -8,7 +8,13 @@ class Manufacture extends Db{
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-
-    //Phân trang manu
-    
+    function paginateManu($url, $total, $page, $perPage,$manu_id)
+    {
+        $totalLinks = ceil($total / $perPage);
+        $link = "";
+        for ($j = 1; $j <= $totalLinks; $j++) {
+            $link = $link . "<a style='padding:20px;' href='$url?page=$j&manu_id=$manu_id'> $j </a>";
+        }
+        return $link;
+    }
 }

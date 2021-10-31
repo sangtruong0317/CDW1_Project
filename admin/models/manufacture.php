@@ -25,5 +25,35 @@ class Manufacture extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array	   
     }
-    
+    //Viet phuong thuc xóa 1 manufacture
+    function delManufactuere($manu_id)
+    {
+        $sql = self::$connection->prepare("DELETE
+    FROM manufactures
+    WHERE manu_id = ?");
+        $sql->bind_param("i", $manu_id);
+        $sql->execute(); //return an object
+    }
+    //Viet phuong thêm 1 Manufacture
+    function addNewManufacture($manu_name)
+    {
+        $sql = self::$connection->prepare("INSERT INTO `manufactures`(`manu_name`) 
+        VALUES (?)");
+        $sql->bind_param("s", $manu_name);
+        $sql->execute(); //return an object
+    }
+    function getManuID($id){
+        $query = self::$connection->prepare("SELECT *   FROM manufactures WHERE manu_id = ?");
+        $query->bind_param("i",$id);
+        $query->execute(); //return an object	 
+        $items = array();
+        $items = $query->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array	   
+    }
+    function updateManu($id,$name){
+        $query = self::$connection->prepare("UPDATE manufactures SET manu_name = ? WHERE manu_id = ?");
+        $query->bind_param("si",$name,$id);
+         //return an object	 
+        return $query->execute(); //return an array
+    }
 }
