@@ -100,58 +100,40 @@
 
                          <div class="new_items">
                         <!--new_items-->
-                        <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="">
-                                                <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                <p><a class="name-products" href="detail.php">Tivi</a></p>
-                                                <h2>19,239,000 VND</h2>
-                                                <p></p>
-                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="">
-                                                <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                <p><a class="name-products" href="detail.php">Tivi</a></p>
-                                                <h2>19,239,000 VND</h2>
-                                                <p></p>
-                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="">
-                                                <img class="hinhanh" src="./images/lg-4k-55.jpg" alt=""/>
-                                                <p><a class="name-products" href="detail.php">Tivi</a></p>
-                                                <h2>19,239,000VND</h2>
-                                                <p></p>
-                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                             <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
+                             <?php
+                             foreach ($product->getNewProducts()as $value) {
+                                 ?>
+                                 <div class="col-sm-4">
+                                     <div class="product-image-wrapper">
+                                         <div class="single-products">
+                                             <div class="productinfo text-center">
+                                                 <a href="detail.php?id=<?php echo $value['ID'] ?>">
+                                                     <img class="hinhanh" src="images/<?php echo $value['pro_image'] ?>" alt=""/>
+                                                     <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
+                                                     <h2><?php echo number_format($value['price']) ?> VND</h2>
+                                                     <p></p>
+                                                     <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                 </a>
+                                             </div>
+                                             <!-- <div class="product-overlay">
+                                                 <div class="overlay-content">
+                                                     <h2><?php echo number_format($value['price']) ?> VND</h2>
+                                                     <p><a href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
+                                                     <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                 </div>
+                                             </div> -->
+                                         </div>
+                                     </div>
+                                 </div>
+                             <?php } ?>
+                         </div>
                          <!--features_items-->
                      </div>
                  </div>
         </section>
-         
-        
+
+
          <?php require "./form/footer.php"; ?>
          <?php require "./form/script.php"; ?>
      </body>
