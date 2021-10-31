@@ -17,7 +17,16 @@ class Product extends Db
     //Hàm viết ra danh sách tất cả sản phẩm (phân trang) 
     
     //Viet phuong thuc lay ra san pham theo ID
-    
+    function getProductsByID($id)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products,manufactures WHERE id = ? and products.manu_id = manufactures.manu_id");
+        $sql->bind_param("i", $id);
+        //Thuc thi cau lanh truy van
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
     //Viet phuong thuc lay ra san pham theo từ khóa
     
     //Viet phuong thuc lay ra san pham theo từ khóa (phân trang)
