@@ -41,6 +41,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <ul class="pagination col-sm-12">
+                            <h3 style=text-align:center>
+                                </p><?php echo $product->paginateForResult($url, $total, $page, $perPage, $key) ?></p>
+                            </h3>
                     </div>
                 </div>
             </div>

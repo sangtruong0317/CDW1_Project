@@ -137,6 +137,15 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                 </div>
             </div>
         </section>
+        <?php if (isset($_GET['manu_id'])){?>
+        <h3 style=text-align:center>
+             </p><?php echo $manufacture->paginateManu($url, $total, $page, $perPage,$manu_id) ?></p>
+         </h3>
+         <?php }else if (isset($_GET['type_id'])){?>
+        <h3 style=text-align:center>
+             </p><?php echo $protype->paginateProtype($url, $total, $page, $perPage,$type_id) ?></p>
+         </h3>
+         <?php }?>
         <?php require "./form/footer.php";?>
     <?php require "./form/script.php";?>
 </body>

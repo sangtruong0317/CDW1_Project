@@ -10,5 +10,13 @@ class Manufacture extends Db{
     }
 
     //Phân trang manu
-    
+    function paginateManu($url, $total, $page, $perPage,$manu_id)
+    {
+        $totalLinks = ceil($total / $perPage);
+        $link = "";
+        for ($j = 1; $j <= $totalLinks; $j++) {
+            $link = $link . "<a style='padding:20px;' href='$url?page=$j&manu_id=$manu_id'> $j </a>";
+        }
+        return $link;
+    }
 }
