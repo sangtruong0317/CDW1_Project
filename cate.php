@@ -43,7 +43,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a href="">
-                                                <img class="hinhanh" src="./images/ss-tv-led-65.jpg" alt=""/>
+                                                <img class="hinhanh" src="./images/ss-tv-led-65.jpg" alt="" />
                                                 <p><a class="name-products" href="detail.php">Tivi Samsung</a></p>
                                                 <h2>11,290,000 VND</h2>
                                                 <p></p>
@@ -58,7 +58,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a href="">
-                                                <img class="hinhanh" src="./images/ss-tv-led-65.jpg" alt=""/>
+                                                <img class="hinhanh" src="./images/ss-tv-led-65.jpg" alt="" />
                                                 <p><a class="name-products" href="detail.php">Tivi Samsung</a></p>
                                                 <h2>11,290,000 VND</h2>
                                                 <p></p>
@@ -73,7 +73,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a href="">
-                                                <img class="hinhanh" src="./images/ss-tv-led-65.jpg" alt=""/>
+                                                <img class="hinhanh" src="./images/ss-tv-led-65.jpg" alt="" />
                                                 <p><a class="name-products" href="detail.php">Tivi Samsung</a></p>
                                                 <h2>11,290,000 VND</h2>
                                                 <p></p>
@@ -92,7 +92,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a href="">
-                                                <img class="hinhanh" src="./images/may-giat-samsung-inverter-8kg-ww80t3020ww-sv-org.jpg" alt=""/>
+                                                <img class="hinhanh" src="./images/may-giat-samsung-inverter-8kg-ww80t3020ww-sv-org.jpg" alt="" />
                                                 <p><a class="name-products" href="detail.php">Máy Giặt Samsung</a></p>
                                                 <h2>11,290,000 VND</h2>
                                                 <p></p>
@@ -107,7 +107,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a href="">
-                                                <img class="hinhanh" src="./images/may-giat-samsung-inverter-8kg-ww80t3020ww-sv-org.jpg" alt=""/>
+                                                <img class="hinhanh" src="./images/may-giat-samsung-inverter-8kg-ww80t3020ww-sv-org.jpg" alt="" />
                                                 <p><a class="name-products" href="detail.php">Máy Giặt Samsung</a></p>
                                                 <h2>11,290,000 VND</h2>
                                                 <p></p>
@@ -122,7 +122,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                     <div class="single-products">
                                         <div class="productinfo text-center">
                                             <a href="">
-                                                <img class="hinhanh" src="./images/may-giat-samsung-inverter-8kg-ww80t3020ww-sv-org.jpg" alt=""/>
+                                                <img class="hinhanh" src="./images/may-giat-samsung-inverter-8kg-ww80t3020ww-sv-org.jpg" alt="" />
                                                 <p><a class="name-products" href="detail.php">Máy Giặt Samsung</a></p>
                                                 <h2>11,290,000 VND</h2>
                                                 <p></p>
@@ -137,21 +137,22 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                 </div>
             </div>
         </section>
-        <?php if (isset($_GET['manu_id'])){?>
-        <h3 style=text-align:center>
-             </p><?php echo $manufacture->paginateManu($url, $total, $page, $perPage,$manu_id) ?></p>
-         </h3>
-         <?php }else if (isset($_GET['type_id'])){?>
-        <h3 style=text-align:center>
-             </p><?php echo $protype->paginateProtype($url, $total, $page, $perPage,$type_id) ?></p>
-         </h3>
-         <?php }?>
-        <?php require "./form/footer.php";?>
-    <?php require "./form/script.php";?>
-</body>
-</html>
-    <?php
+        <?php if (isset($_GET['manu_id'])) { ?>
+            <h3 style=text-align:center>
+                </p><?php echo $manufacture->paginateManu($url, $total, $page, $perPage, $manu_id) ?></p>
+            </h3>
+        <?php } else if (isset($_GET['type_id'])) { ?>
+            <h3 style=text-align:center>
+                </p><?php echo $protype->paginateProtype($url, $total, $page, $perPage, $type_id) ?></p>
+            </h3>
+        <?php } ?>
+        <?php require "./form/footer.php"; ?>
+        <?php require "./form/script.php"; ?>
+    </body>
+
+    </html>
+<?php
 } else {
-   // header("location:index.php");
+    // header("location:index.php");
 }
-    ?>
+?>
