@@ -19,6 +19,7 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
     }
 }
 ?>
+<!--Xu ly gio hang-->
 
 <body>
     <?php require "./form/header-bottom.php"; ?>
@@ -72,7 +73,7 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                 <?php }
                                     }
                                 } ?>
-
+                <!--Form dat hang-->
                         </tbody>
                     </table>
                     <h3>
@@ -100,8 +101,6 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                 </div>
             </div>
         </section>
-        <!--/#cart_items-->
-        <!--features_items-->
         </div>
         </div>
     </section>
