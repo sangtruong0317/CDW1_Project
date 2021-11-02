@@ -43,14 +43,12 @@
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <img class="img-fluid img-products" style="width: 250px; height: 200px" src="images/" alt="" />
-                                                <p class="title-products ">Name</p>
-                                                <p class="price-products">0 VND</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                <img class="img-fluid img-products" style="width: 250px; height: 200px" src="images/<?php echo $value['pro_image'] ?>" alt="" />
+                                                <p class="title-products "><?php echo $value['name'] ?></p>
+                                                <p class="price-products"><?php echo number_format($value['price']) ?> VND</p>
+                                                <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                             </div>
-                                            <?php echo number_format($value['price']) ?>
-                                            <?php echo $value['ID'] ?><?php echo $value['name'] ?>
-                                            <?php echo $value['ID'] ?>
+                                           
                                         </div>
                                     </div>
                                 </div>
