@@ -11,5 +11,13 @@ class Protype extends Db{
     //Viet phuong thuc lay ra tat ca san pham theo type_id
 
     //phân trang
-    
+    function paginateProtype($url, $total, $page, $perPage,$type_id)
+    {
+        $totalLinks = ceil($total / $perPage);
+        $link = "";
+        for ($j = 1; $j <= $totalLinks; $j++) {
+            $link = $link . "<a style='padding:20px;' href='$url?page=$j&type_id=$type_id'> $j </a>";
+        }
+        return $link;
+    }
 }

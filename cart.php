@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require "./form/head.php"; ?>
-
+<?php
+$total = 0;
+if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+    } else if (isset($_SESSION['last_id'])) {
+        $id = $_SESSION['last_id'];
+    }
+    if (isset($_SESSION['cart'][$id])) {
+        $_SESSION['cart'][$id]++;
+    } else {
+        $_SESSION['cart'][$id] = 1;
+    }
+    if (!isset($_SESSION['id'][$id])) {
+        $_SESSION['id'][$id] = $id;
+    }
+}
+?>
 
 <body>
     <?php require "./form/header-bottom.php"; ?>
@@ -23,34 +40,43 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="cart_product">
-                                    <a href="#"><img style="width:150px;height;200px" src="images/" alt="" width=110></a>
-                                </td>
-                                <td class="cart_description">
-                                    <h4><a href="#">Tên</a></h4>
-                                </td>
-                                <td class="cart_price">
-                                    <p>0 VND</p>
-                                </td>
-                                <td class="cart_quantity">
-                                    <div class="cart_quantity_button">
-                                        <a class="cart_quantity_up" href="#"> + </a>
-                                        <input class="cart_quantity_input" type="text" name="quantity" value="" autocomplete="off" size="2">
-                                        <a class="cart_quantity_down" href="#"> - </a>
-                                    </div>
-                                </td>
-                                <td class="cart_total">
-                                    <p class="cart_total_price">0 VND</p>
-                                </td>
-                                <td class="cart_delete">
-                                    <a class="cart_quantity_delete" href="#"><i class="fa fa-times"></i></a>
-                                </td>
+                                <?php if (isset($_SESSION['id']) && isset($_SESSION['cart'])) {
+                                    foreach ($_SESSION['id'] as $numberID) {
+                                        foreach ($product->getProductsByID($numberID) as $value) { ?>
+                                            <td class="cart_product">
+                                                <a href=""><img style="width:150px;height;200px" src="images/<?php echo $value['pro_image'] ?>" alt="" width=110></a>
+                                            </td>
+                                            <td class="cart_description">
+                                                <h4><a href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></h4>
+                                            </td>
+                                            <td class="cart_price">
+                                                <p><?php echo number_format($value['price']) ?> VND</p>
+                                            </td>
+                                            <td class="cart_quantity">
+                                                <div class="cart_quantity_button">
+                                                    <a class="cart_quantity_up" href="change.php?id=<?php echo $numberID ?>&control=1"> + </a>
+                                                    <input class="cart_quantity_input" type="text" name="quantity" value="<?php echo $_SESSION['cart'][$numberID] ?>" autocomplete="off" size="2">
+                                                    <a class="cart_quantity_down" href="change.php?id=<?php echo $numberID ?>&control=2"> - </a>
+                                                </div>
+                                            </td>
+                                            <td class="cart_total">
+                                                <p class="cart_total_price"><?php echo number_format($value['price'] * $_SESSION['cart'][$numberID]) ?> VND</p>
+                                                <?php $total += $value['price'] * $_SESSION['cart'][$numberID];
+                                                $_SESSION['total'] = $total;
+                                                ?>
+                                            </td>
+                                            <td class="cart_delete">
+                                                <a class="cart_quantity_delete" href="change.php?id=<?php echo $numberID ?>&control=3"><i class="fa fa-times"></i></a>
+                                            </td>
                             </tr>
+                <?php }
+                                    }
+                                } ?>
 
                         </tbody>
                     </table>
                     <h3>
-                        <p style=text-align:center;background-color:#7b7977;padding:10px;color:white>Tổng Cộng:  VND</p>
+                        <p style=text-align:center;background-color:#7b7977;padding:10px;color:white>Tổng Cộng: VND</p>
                     </h3>
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post" action="processOrder.php">
                         <div class="form-group col-md-6">
