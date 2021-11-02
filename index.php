@@ -96,12 +96,6 @@
                      </div>
                  </div>
         </section>
-
-        <!--paginate-->
-
-        <?php echo $product->paginate($url, $total, $page, $perPage) ?>
-        
-
          <?php require "./form/footer.php"; ?>
          <?php require "./form/script.php"; ?>
      </body>
