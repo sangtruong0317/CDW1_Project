@@ -136,6 +136,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                     </div>
                 </div>
             </div>
+            <!--Xu ly paginate-->
         </section>
         <?php if (isset($_GET['manu_id'])) { ?>
             <h3 style=text-align:center>
