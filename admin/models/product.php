@@ -31,9 +31,6 @@ class Product extends Db
     //Viet phuong thuc lọc sản phẩm theo Manufactures
     
     //Viet phuong thuc lọc sản phẩm theo Protype
-    
-    
-    
 
     //Phân trang
     
