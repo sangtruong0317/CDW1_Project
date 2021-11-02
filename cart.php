@@ -100,8 +100,6 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                 </div>
             </div>
         </section>
-        <!--/#cart_items-->
-        <!--features_items-->
         </div>
         </div>
     </section>
