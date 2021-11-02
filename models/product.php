@@ -11,7 +11,14 @@ class Product extends Db
         return $items; //return an array
     }
     //Viet phuong thuc lay ra 3 sp moi nhat
-
+    function getNewProducts()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE products.Created_at ORDER by Created_at DESC LIMIT 1,6");
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
     //Viet phuong thuc lay ra 3 san pham noi bat
     
     //Hàm viết ra danh sách tất cả sản phẩm (phân trang) 
