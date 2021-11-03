@@ -19,28 +19,16 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-
     //Viet phuong thuc lay ra 3 san pham noi bat
-    function getFeatureProducts()
-    {
-        $sql = self::$connection->prepare("SELECT * FROM products WHERE manu_id = 1 and feature = 1 LIMIT 0,3");
-        $sql->execute(); //return an object
+    function getPopularProducts(){
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE feature = 1 LIMIT 3 ");
+        $sql->execute();//return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
     //Hàm viết ra danh sách tất cả sản phẩm (phân trang) 
-    function getAllProductsByPage($page, $perPage)
-    {
-        // Tính số thứ tự trang bắt đầu  
-        $firstLink = ($page - 1) * $perPage;
-        //Dùng LIMIT để giới hạn số lượng hiển thị 1 trang 
-        $sql = self::$connection->prepare("SELECT * FROM Products LIMIT $firstLink, $perPage");
-        $sql->execute(); //return an object 
-        $items = array();
-        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $items; //return an array   
-    }
+    
     //Viet phuong thuc lay ra san pham theo ID
     function getProductsByID($id)
     {
@@ -52,6 +40,7 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+
     //Viet phuong thuc lay ra san pham theo từ khóa
     function getProductsByKey($key)
     {
@@ -79,15 +68,7 @@ class Product extends Db
         return $items; //return an array   
     }
     //Phân trang (Viết cái này trong DB nghe có vẻ hớp lý hơn ==')
-    function paginate($url, $total, $page, $perPage)
-    {
-        $totalLinks = ceil($total / $perPage);
-        $link = "";
-        for ($j = 1; $j <= $totalLinks; $j++) {
-            $link = $link . "<a style='padding:20px;' href='$url?page=$j'> $j </a>";
-        }
-        return $link;
-    }
+    
     //Phân trang cho trang Reasult
     function paginateForResult($url, $total, $page, $perPage, $key)
     {
@@ -98,6 +79,7 @@ class Product extends Db
         }
         return $link;
     }
+    
     //Viet phuong thuc lay ra san pham theo manu_id
     function getProductsByManu_ID($manu_id)
     {
@@ -137,6 +119,7 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    
     //Viet phuong thuc lay ra san pham theo type_id (phân trang)
     function getProductsByType_IDByPage($page, $perPage, $type_id)
     {

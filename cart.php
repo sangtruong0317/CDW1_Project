@@ -4,10 +4,9 @@
 <?php
 $total = 0;
 if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
-    if(isset($_GET['id'])){
+    if (isset($_GET['id'])) {
         $id = $_GET['id'];
-    }
-    else if (isset($_SESSION['last_id'])){
+    } else if (isset($_SESSION['last_id'])) {
         $id = $_SESSION['last_id'];
     }
     if (isset($_SESSION['cart'][$id])) {
@@ -18,9 +17,9 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
     if (!isset($_SESSION['id'][$id])) {
         $_SESSION['id'][$id] = $id;
     }
-    
 }
 ?>
+<!--Xu ly gio hang-->
 
 <body>
     <?php require "./form/header-bottom.php"; ?>
@@ -64,7 +63,7 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                                             <td class="cart_total">
                                                 <p class="cart_total_price"><?php echo number_format($value['price'] * $_SESSION['cart'][$numberID]) ?> VND</p>
                                                 <?php $total += $value['price'] * $_SESSION['cart'][$numberID];
-                                                        $_SESSION['total'] = $total;
+                                                $_SESSION['total'] = $total;
                                                 ?>
                                             </td>
                                             <td class="cart_delete">
@@ -74,11 +73,11 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                 <?php }
                                     }
                                 } ?>
-
+                <!--Form dat hang-->
                         </tbody>
                     </table>
                     <h3>
-                        <p style=text-align:center;background-color:#7b7977;padding:10px;color:white>Tổng Cộng: <?php echo number_format($total) ?> VND </p>
+                        <p style=text-align:center;background-color:#7b7977;padding:10px;color:white>Tổng Cộng: VND</p>
                     </h3>
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post" action="processOrder.php">
                         <div class="form-group col-md-6">
@@ -93,9 +92,6 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                         <div class="form-group col-md-12">
                             <input type="number" name="phone" class="form-control" placeholder="Số điện thoại" required>
                         </div>
-                        <!-- <div class="form-group col-md-12">
-                            <textarea name="message" id="message" class="form-control" rows="3" placeholder="Your Message Here" required></textarea>
-                        </div> -->
                         <div class="form-group col-md-12">
                             <a class="btn btn-default update" href="index.php" style="background: #4b5051;">Tiếp tục mua hàng</a>
                             <a class="btn btn-default check_out" href="change.php?control=4" style="background: #a53535;">Xóa tất cả</a>
@@ -105,8 +101,6 @@ if (isset($_GET['id']) || isset($_SESSION['last_id'])) {
                 </div>
             </div>
         </section>
-        <!--/#cart_items-->
-        <!--features_items-->
         </div>
         </div>
     </section>

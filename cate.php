@@ -27,7 +27,8 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                 <div class="panel panel-default">
                                     <?php foreach ($manufacture->getAllManufactures() as $value) { ?>
                                         <div class="panel-heading">
-                                            <h4 class="panel-title"><a href="cate.php?manu_id=<?php echo $value['manu_id'] ?>"><?php echo $value['manu_name'] ?></a></h4>
+                                            <h4 class="panel-title"><a href="cate.php?manu_id=<?php echo $value['manu_id'] ?>"><?php echo $value['manu_name'] ?></a>
+                                            </h4>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -49,11 +50,12 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                         <div class="col-sm-4">
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
-                                                    <div class="productinfo text-center"> 
-                                                        <img class="img-fluid img-products" src="images/<?php echo $value['pro_image'] ?>" alt=""/>
+                                                    <div class="productinfo text-center">
+                                                        <img class="img-fluid img-products" src="images/<?php echo $value['pro_image'] ?>" alt="" />
                                                         <p class="title-products"><?php echo $value['name'] ?></p>
                                                         <p class="price-products"><?php echo number_format($value['price']) ?> VND</p>
-                                                        <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
+                                                            to cart</a>
                                                     </div>
                                                     <!-- <div class="product-overlay">
                                                         <div class="overlay-content">
@@ -77,19 +79,13 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                             <div class="col-sm-4">
                                                 <div class="product-image-wrapper">
                                                     <div class="single-products">
-                                                        <div class="productinfo text-center" style="height:360px"> 
+                                                        <div class="productinfo text-center" style="height:360px">
                                                             <img class="img-fluid img-products" style="width: 250px; height: 200px" src="images/<?php echo $value['pro_image'] ?>" alt="" />
                                                             <p class="title-products "><?php echo $value['name'] ?></p>
                                                             <p class="price-products"><?php echo number_format($value['price']) ?> VND</p>
-                                                            <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                            <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
+                                                                to cart</a>
                                                         </div>
-                                                        <!-- <div class="product-overlay">
-                                                            <div class="overlay-content">
-                                                                <h2><?php echo number_format($value['price']) ?> VND</h2>
-                                                                <p><a href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
-                                                                <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                                            </div>
-                                                        </div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -103,21 +99,23 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                 </div>
             </div>
         </section>
-        <?php if (isset($_GET['manu_id'])){?>
-        <h3 style=text-align:center>
-             </p><?php echo $manufacture->paginateManu($url, $total, $page, $perPage,$manu_id) ?></p>
-         </h3>
-         <?php }else if (isset($_GET['type_id'])){?>
-        <h3 style=text-align:center>
-             </p><?php echo $protype->paginateProtype($url, $total, $page, $perPage,$type_id) ?></p>
-         </h3>
-         <?php }?>
-        <?php require "./form/footer.php";?>
-    <?php require "./form/script.php";?>
-</body>
-</html>
-    <?php
+          <!--paginate-->
+        <?php if (isset($_GET['manu_id'])) { ?>
+            <h3 style=text-align:center>
+                </p><?php echo $manufacture->paginateManu($url, $total, $page, $perPage, $manu_id) ?></p>
+            </h3>
+        <?php } else if (isset($_GET['type_id'])) { ?>
+            <h3 style=text-align:center>
+                </p><?php echo $protype->paginateProtype($url, $total, $page, $perPage, $type_id) ?></p>
+            </h3>
+        <?php } ?>
+        <?php require "./form/footer.php"; ?>
+        <?php require "./form/script.php"; ?>
+    </body>
+
+    </html>
+<?php
 } else {
-   // header("location:index.php");
+    // header("location:index.php");
 }
-    ?>
+?>

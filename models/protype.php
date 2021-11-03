@@ -16,6 +16,7 @@ class Protype extends Db{
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    //phân trang
     function paginateProtype($url, $total, $page, $perPage,$type_id)
     {
         $totalLinks = ceil($total / $perPage);

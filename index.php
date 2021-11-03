@@ -12,7 +12,7 @@
         ?>
 
      <body>
-         <?php require "./form/header-bottom.php"; ?>
+         <?php require "./form/header-bottom.php";?>
          <section>
              <div class="container body">
                  <div class="row">
@@ -36,17 +36,17 @@
                              <!--features_items-->
                              <h2 class="title text-center">Top Sản Phẩm Nổi Bật</h2>
                              <!-- Foreach here -->
-                             <?php foreach ($product->getNewProducts() as $value) { ?>
+                             <?php foreach ($product->getPopularProducts() as $value) { ?>
                                  <div class="col-sm-4">
                                      <div class="product-image-wrapper">
                                          <div class="single-products">
                                              <div class="productinfo text-center">
                                                  <a href="detail.php?id=<?php echo $value['ID'] ?>">
-                                                 <img class="hinhanh" src="images/<?php echo $value['pro_image'] ?>" alt="" />
-                                                 <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
-                                                 <h2><?php echo number_format($value['price']) ?> VND</h2>
-                                                 <p></p>
-                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                     <img class="hinhanh" src="images/<?php echo $value['pro_image'] ?>" alt="" />
+                                                     <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
+                                                     <h2><?php echo number_format($value['price']) ?> VND</h2>
+                                                     <p></p>
+                                                     <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                                  </a>
                                              </div>
                                              <!-- <div class="product-overlay">
@@ -64,21 +64,21 @@
 
                          <div class="new_items">
                         <!--new_items-->
-                    <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
-                        <?php
-                        foreach ($product->getFeatureProducts()as $value) {
-                        ?>
-                            <div class="col-sm-4">
-                            <div class="product-image-wrapper">
+                             <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
+                             <?php
+                             foreach ($product->getNewProducts()as $value) {
+                                 ?>
+                                 <div class="col-sm-4">
+                                     <div class="product-image-wrapper">
                                          <div class="single-products">
-                                             <div class="productinfo text-center"> 
-                                                <a href="detail.php?id=<?php echo $value['ID'] ?>">
-                                                <img class="hinhanh" src="images/<?php echo $value['pro_image'] ?>" alt=""/>
-                                                 <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
-                                                 <h2><?php echo number_format($value['price']) ?> VND</h2>
-                                                 <p></p>    
-                                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                                </a>
+                                             <div class="productinfo text-center">
+                                                 <a href="detail.php?id=<?php echo $value['ID'] ?>">
+                                                     <img class="hinhanh" src="images/<?php echo $value['pro_image'] ?>" alt=""/>
+                                                     <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
+                                                     <h2><?php echo number_format($value['price']) ?> VND</h2>
+                                                     <p></p>
+                                                     <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                 </a>
                                              </div>
                                              <!-- <div class="product-overlay">
                                                  <div class="overlay-content">
@@ -89,17 +89,13 @@
                                              </div> -->
                                          </div>
                                      </div>
-                            </div>
-                        <?php } ?>
-                    </div>
+                                 </div>
+                             <?php } ?>
+                         </div>
                          <!--features_items-->
                      </div>
                  </div>
-         </section>
-         
-         <!-- <h3 style=text-align:center>
-             <p><?php echo $product->paginate($url, $total, $page, $perPage) ?></p>
-         </h3> -->
+        </section>
          <?php require "./form/footer.php"; ?>
          <?php require "./form/script.php"; ?>
      </body>
