@@ -53,6 +53,14 @@ class Product extends Db
         $sql->execute(); //return an object
     }
 
+    //Viet phuong thuc xoa san pham
+    function delProduct($id)
+    {
+        $sql = self::$connection->prepare("DELETE FROM products WHERE id = ?");
+        $sql->bind_param("i", $id);
+        $sql->execute(); //return an object
+    }
+
 
     //Viet phuong thuc lọc sản phẩm theo Manufactures
     

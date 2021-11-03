@@ -17,6 +17,7 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
             <div id="breadcrumb" style="padding: 1px;background: #cbcbcb;"> <a href="index.php" title="Go to Home" class="tip-bottom current" style="font-size: 17px;"><i class="icon-home"></i> Home</a></div>
             <h1>Quản Lí Sản Phẩm </h1>
     </div>
+    <!-- Model thong bao xoa sp -->
         <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -79,7 +80,7 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                         <td>
                                             <a href="form.php?value=product" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
                                             <button type="button" style="height: 35px; width:86px; font-size: 15px; margin: 15px 5px 15px 25px" 
-                                            class="btn btn-danger" onclick=""
+                                            class="btn btn-danger" onclick="deleteID(<?= $value['ID'] ?>)"
                                             data-toggle="modal" data-target="#delete">
                                                 Xóa <i class="fas fa-trash-alt"></i>
                                             </button>
