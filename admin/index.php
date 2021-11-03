@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require "./form/head.php"; ?>
+<?php
+$perPage = 6; 	//số lượng sản phẩm hiển thị trên 1 trang  
+$total = count($product->getAllProducts()); 	// Tính tổng số dòng
+?>
 
 <body>
     <?php require "./form/header_part.php"; ?>
@@ -61,20 +65,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+                                    <?php foreach ($product->getAllProductsByPage($page, $perPage) as $value){?>
                                     <tr class="">
-                                        <td class="getId">1</td>
-                                        <td width="250"><img class="hinhanh" src="./images/tu-lanh-panasonic-nr-bv280qsvn-2-org.jpg" alt=""/>
-                                        </td>
-                                        <td>Tu Lanh Panasonic</td>
-                                        <td>Panasonic</td>
-                                        <td>Tu Lanh</td>
-                                        <td> Lanh Panasonic...</td>
-                                        <td>12 990 000 VNĐ</td>
-                                        <td></td>
-                                        <td></td>
+                                        <td class="getId"><?php echo $value['ID']?></td>
+                                        <td width="250"><img src="../images/<?= $value['pro_image']?>" /></td>
+                                        <td><?php echo $value['name']?></td>
+                                        <td><?php echo $value['manu_name']?></td>
+                                        <td><?php echo $value['type_name']?></td>
+                                        <td><?php echo substr($value['description'],0,100)?>...</td>
+                                        <td><?php echo number_format($value['price'])?></td>
+                                        <td><?php echo $value['feature']?></td>
+                                        <td><?php echo $value['created_at']?></td>
                                         <td>
-                                            <a href="#" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
+                                            <a href="form.php?value=product" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
                                             <button type="button" style="height: 35px; width:86px; font-size: 15px; margin: 15px 5px 15px 25px" 
                                             class="btn btn-danger" onclick=""
                                             data-toggle="modal" data-target="#delete">
@@ -83,6 +86,7 @@
                                             <a href="#" class="btn btn-success" style="height: 25px; width:60px; font-size: 15px; margin: 0px 5px 0 25px">Sửa <i class="far fa-edit"></i></a>
                                         </td>
                                     </tr>
+                                    <?php }?>
                                 </tbody>
                             </table>
                         </div>

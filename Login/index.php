@@ -41,6 +41,7 @@ style="background-color: #fff;">
 		<div class="main-w3l">
 			<h1 class="logo-w3" style="font-weight: bold; font-size: 40px;margin: 4% 0;color: #c3187f;">Welcom!</h1>
 			<div class="w3layouts-main">
+				<!-- Form Login -->
 				<h2><span style="color: #fff;">Login now</span></h2>
 					<form action="" method="post">
 						<input placeholder="Username" name="UserName" type="text" required="">
@@ -63,3 +64,23 @@ style="background-color: #fff;">
 
 </body>
 </html>
+<!-- Xu ly login user và admin -->
+<?php
+if (isset($_POST['login'])){
+	$user_name = $_POST['UserName'];
+	$user_password = $_POST['Password'];
+	//kiem tra user
+	if($user->login($user_name, $user_password)==1){
+		$_SESSION['admin_name']=$user_name;
+		echo "<script> alert('Xin chào $user_name');window.location.href='../admin/index.php'</script>";
+	}
+	//kiem tra admin
+	else if($user->login($user_name, $user_password)==0){
+		$_SESSION['customer_name']=$user_name;
+		echo "<script> alert('Xin chào khách hàng $user_name');window.location.href='../index.php'</script>";
+	}
+	else{
+		echo "<script> alert('Tài khoản không đúng !! Vui lòng thử lại');window.location.href='index.php'</script>";
+	}
+} 
+?>
