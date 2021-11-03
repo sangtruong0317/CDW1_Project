@@ -24,7 +24,9 @@
                     <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li> -->
                 </ul>
             </li>
+            
             <li class=""><a title="" href="#"><i class="icon icon-cog" style="color: #fff;font-size: 15px"></i> <span class="text" style="color: #fff;font-size: 15px">Cài đặt</span></a></li>
+            <!-- Đăng xuat admin -->
             <li class=""><a title="" href="../Login/logout.php"><i class="icon icon-share-alt" style="color: #fff;font-size: 15px"></i> <span
                         class="text" style="color: #fff;font-size: 15px">Đăng xuất</span></a></li>
         </ul>
