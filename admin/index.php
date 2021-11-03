@@ -80,7 +80,7 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                         <td>
                                             <a href="form.php?value=product" class="btn btn-primary" style="height: 25px; width:60px; font-size: 15px; margin: 15px 5px 0 25px">Thêm <i class="fas fa-plus-square"></i></a>
                                             <button type="button" style="height: 35px; width:86px; font-size: 15px; margin: 15px 5px 15px 25px" 
-                                            class="btn btn-danger" onclick=""
+                                            class="btn btn-danger" onclick="deleteID(<?= $value['ID'] ?>)"
                                             data-toggle="modal" data-target="#delete">
                                                 Xóa <i class="fas fa-trash-alt"></i>
                                             </button>
