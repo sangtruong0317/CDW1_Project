@@ -30,6 +30,7 @@ color:yellowgreen;
 <!-- /css -->
 </head>
 <body>
+<!-- Form đăng ký -->
 <h1 class="w3ls">Official Signup Form</h1>
 <div class="content-w3ls">
 	<div class="content-agile1">
@@ -56,6 +57,7 @@ color:yellowgreen;
 <p class="copyright w3l">© 2017 Official Signup Form. All Rights Reserved | Design by Nhóm 11</a></p>
 </body>
 </html>
+<!-- Đăng ký tài khoản -->
 <?php 
  require '../admin/config.php';
  require '../admin/models/db.php';
