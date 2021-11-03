@@ -17,6 +17,7 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
             <div id="breadcrumb" style="padding: 1px;background: #cbcbcb;"> <a href="index.php" title="Go to Home" class="tip-bottom current" style="font-size: 17px;"><i class="icon-home"></i> Home</a></div>
             <h1>Quản Lí Sản Phẩm </h1>
     </div>
+    <!-- Model thong bao xoa sp -->
         <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
