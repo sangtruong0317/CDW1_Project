@@ -35,12 +35,15 @@ if (isset($_GET['value'])) {
                                 <?php if ($value == "product") { ?>
                                     <!-- BEGIN USER FORM -->
                                     <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                    <!-- Tên sp -->
                                         <div class="control-group">
+                                            
                                             <label class="control-label">Tên:</label>
                                             <div class="controls">
                                                 <input type="text" class="span11" placeholder="Tên sản phẩm" name="name" required/> *
                                             </div>
                                         </div>
+                                        <!-- Chọn hãng -->
                                         <div class="control-group">
                                             <label class="control-label">Chọn hãng:</label>
                                             <div class="controls">
@@ -52,7 +55,9 @@ if (isset($_GET['value'])) {
                                                 </select> *
                                             </div>
                                         </div>
+                                        <!-- Chọn loại SP -->
                                         <div class="control-group">
+
                                             <label class="control-label">Chọn loại sản phẩm:</label>
                                             <div class="controls">
                                                 <select name="type_id" id="subcate">
@@ -61,29 +66,34 @@ if (isset($_GET['value'])) {
                                                     <?php } ?>
                                                 </select> *
                                             </div>
+                                            <!-- Chọn hình SP -->
                                             <div class="control-group">
                                                 <label class="control-label">Chọn hình:</label>
                                                 <div class="controls">
                                                     <input type="file" name="fileUpload" id="fileUpload" required>
                                                 </div>
                                             </div>
+                                            <!-- Chi tiết sản phẩm -->
                                             <div class="control-group">
                                                 <label class="control-label">Chi tiết</label>
                                                 <div class="controls">
                                                     <textarea class="span11" placeholder="Chi tiết sản phẩm" name="description" required></textarea>
                                                 </div>
+                                                <!-- Giá SP -->
                                                 <div class="control-group">
                                                     <label class="control-label">Giá :</label>
                                                     <div class="controls">
                                                         <input type="text" class="span11" placeholder="Giá" name="price" required/> *
                                                     </div>
                                                 </div>
+                                                <!-- SP Nổi bật -->
                                                 <div class="control-group">
                                                     <label class="control-label">Nổi bật:</label>
                                                     <div class="controls">
                                                         <input type="number" class="span11" name="feature" min="0" max="1" required/> *
                                                     </div>
                                                 </div>
+                                                <!-- Nút thêm -->
                                                 <div class="form-actions">
                                                     <button type="submit" name="addProduct" class="btn btn-success">Thêm</button>
                                                 </div>
