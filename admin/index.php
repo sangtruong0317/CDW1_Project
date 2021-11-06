@@ -84,7 +84,10 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                             data-toggle="modal" data-target="#delete">
                                                 Xóa <i class="fas fa-trash-alt"></i>
                                             </button>
-                                            <a href="#" class="btn btn-success" style="height: 25px; width:60px; font-size: 15px; margin: 0px 5px 0 25px">Sửa <i class="far fa-edit"></i></a>
+                                            <a href="edit.php?idProduct=<?= $value['ID']?>&edit=product"
+                                                class="btn btn-success"
+                                                style="height: 25px; width:60px; font-size: 15px; margin: 0px 5px 0 25px">Sửa
+                                                <i class="far fa-edit"></i></a>
                                         </td>
                                     </tr>
                                     <?php }?>

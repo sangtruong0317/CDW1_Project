@@ -67,7 +67,8 @@ $total = count($manufacture->getAllManufactures());     // Tính tổng số dò
                                                 style="margin: 0 20px 0 20px">
                                                     Xóa <i class="fas fa-trash-alt"></i>
                                                 </button>
-                                                <a href="#" class="btn btn-success">Sửa <i class="far fa-edit"></i></a>
+
+                                                <a href="edit.php?idManu=<?= $value['manu_id'] ?>&editManu" class="btn btn-success">Sửa <i class="far fa-edit"></i></a>
                                             </td>
                                         </tr>
                                 </tbody>
