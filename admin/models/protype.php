@@ -15,13 +15,22 @@ class Protype extends Db
     
 
     //Viet phuong thuc xóa 1 protype
-    
-    
-    //update
-    
 
-    
     //lay id 
+    function getProtypeID($id){
+        $sql = self::$connection->prepare("SELECT * FROM protypes WHERE type_id = ?");
+            $sql->bind_param("i", $id);
+            $sql->execute(); //return an object
+            $items = array();
+            $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+            return $items;
+        }
+    //update
+    function updateProtype($id,$typeName){
+        $query = self::$connection->prepare("UPDATE protypes SET type_name = ? WHERE type_id = ?");
+        $query->bind_param("si",$typeName,$id);
+        return $query->execute();
+    }
     
     
 }
