@@ -18,7 +18,7 @@
                         unlink($pathOld);
                     }
                         if(move_uploaded_file($_FILES['fileUpload']['tmp_name'],$path)){
-                        if($product->updateProduct($id,$name,$manu,$type,$price,$image,$description,$feature,$date)){
+                        if($product->updateProduct($name,$manu,$type,$price,$image,$description,$feature,$date,$id)){
                             echo "<script>alert('Đã sửa');window.location.href='index.php'</script>";
                         }
                         else{
@@ -37,7 +37,7 @@
                     
                     $image = $_FILES['fileUpload']['name'];
                     $image = $value['pro_image'];
-                    if($product->updateProduct($id,$name,$manu,$type,$price,$image,$description,$feature,$date)){
+                    if($product->updateProduct($name,$manu,$type,$price,$image,$description,$feature,$date,$id)){
                         echo "<script>alert('Đã sửa');window.location.href='index.php'</script>";
                     }
                     else{
