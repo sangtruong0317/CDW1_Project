@@ -46,14 +46,14 @@
                                                      <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
                                                      <h2><?php echo number_format($value['price']) ?> VND</h2>
                                                      <p></p>
-                                                     <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                     <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                                  </a>
                                              </div>
                                              <!-- <div class="product-overlay">
                                                  <div class="overlay-content">
                                                      <h2><?php echo number_format($value['price']) ?> VND</h2>
                                                      <p><a href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
-                                                     <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                     <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                                  </div>
                                              </div> -->
                                          </div>
@@ -77,7 +77,7 @@
                                                      <p><a class="name-products" href="detail.php?id=<?php echo $value['ID'] ?>"><?php echo $value['name'] ?></a></p>
                                                      <h2><?php echo number_format($value['price']) ?> VND</h2>
                                                      <p></p>
-                                                     <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                     <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
                                                  </a>
                                              </div>
                                              <!-- <div class="product-overlay">

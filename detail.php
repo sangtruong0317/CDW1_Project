@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="left-sidebar">
-                            <h2>Thương Hiệu</h2>
+                            <h2>Category</h2>
                             <div class="panel-group category-products" id="accordian">
                                 <!--category-productsr-->
                                 <?php foreach ($manufacture->getAllManufactures() as $value) { ?>

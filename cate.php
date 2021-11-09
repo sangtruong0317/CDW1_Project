@@ -21,7 +21,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="left-sidebar">
-                            <h2>Thương Hiệu</h2>
+                            <h2>Category</h2>
                             <div class="panel-group category-products" id="accordian">
                                 <!--category-productsr-->
                                 <div class="panel panel-default">
@@ -51,11 +51,11 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                    <a href="detail.php?id=<?php echo $value['ID'] ?>">
                                                         <img class="img-fluid img-products" src="images/<?php echo $value['pro_image'] ?>" alt="" />
                                                         <p class="title-products"><?php echo $value['name'] ?></p>
                                                         <p class="price-products"><?php echo number_format($value['price']) ?> VND</p>
-                                                        <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                        <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
+                                                            to cart</a>
                                                     </div>
                                                     <!-- <div class="product-overlay">
                                                         <div class="overlay-content">
@@ -80,11 +80,11 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id'])) {
                                                 <div class="product-image-wrapper">
                                                     <div class="single-products">
                                                         <div class="productinfo text-center" style="height:360px">
-                                                        <a href="detail.php?id=<?php echo $value['ID'] ?>">
                                                             <img class="img-fluid img-products" style="width: 250px; height: 200px" src="images/<?php echo $value['pro_image'] ?>" alt="" />
                                                             <p class="title-products "><?php echo $value['name'] ?></p>
                                                             <p class="price-products"><?php echo number_format($value['price']) ?> VND</p>
-                                                            <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                                            <a href="cart.php?id=<?php echo $value['ID'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
+                                                                to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
