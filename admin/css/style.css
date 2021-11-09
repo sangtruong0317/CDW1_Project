@@ -4,7 +4,16 @@
 }
 ul.pagination li{
 	float: left;
-  }
+}
+ul.pagination li:visited{
+	background: #27a9e3;
+}
+ul.pagination li:first-child, 
+ul.pagination li:nth-child(3),
+ul.pagination li:nth-child(5),
+ul.pagination li:nth-child(7){
+	border: 1px solid #000;
+}
 html, body{height:100%}
 /* Main */
 
