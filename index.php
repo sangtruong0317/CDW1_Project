@@ -1,15 +1,15 @@
      <!DOCTYPE html>
      <html lang="en">
-     <?php require "./form/head.php"; ?>
+     <?php require "./form/head.php";?>
      <?php
-        $perPage = 6;
-        if (!isset($_GET['page'])) {
-            $_GET['page'] = 1;
-        }
-        $page = $_GET['page'];
-        $total = count($product->getAllProducts());
-        $url = $_SERVER['PHP_SELF'];
-        ?>
+$perPage = 6;
+if (!isset($_GET['page'])) {
+    $_GET['page'] = 1;
+}
+$page = $_GET['page'];
+$total = count($product->getAllProducts());
+$url = $_SERVER['PHP_SELF'];
+?>
 
      <body>
          <?php require "./form/header-bottom.php";?>
@@ -22,11 +22,11 @@
                              <div class="panel-group category-products" id="accordian">
                                  <!--category-productsr-->
                                  <div class="panel panel-default">
-                                     <?php foreach ($manufacture->getAllManufactures() as $value) { ?>
+                                     <?php foreach ($manufacture->getAllManufactures() as $value) {?>
                                          <div class="panel-heading">
                                              <h4 class="panel-title"><a href="cate.php?manu_id=<?php echo $value['manu_id'] ?>"><?php echo $value['manu_name'] ?></a></h4>
                                          </div>
-                                     <?php } ?>
+                                     <?php }?>
                                  </div>
                              </div>
                          </div>
@@ -36,7 +36,7 @@
                              <!--features_items-->
                              <h2 class="title text-center">Top Sản Phẩm Nổi Bật</h2>
                              <!-- Foreach here -->
-                             <?php foreach ($product->getPopularProducts() as $value) { ?>
+                             <?php foreach ($product->getPopularProducts() as $value) {?>
                                  <div class="col-sm-4">
                                      <div class="product-image-wrapper">
                                          <div class="single-products">
@@ -59,15 +59,13 @@
                                          </div>
                                      </div>
                                  </div>
-                             <?php } ?>
+                             <?php }?>
                          </div>
 
                          <div class="new_items">
                         <!--new_items-->
                              <h2 class="title text-center">Sản Phẩm Mới Nhất</h2>
-                             <?php
-                             foreach ($product->getNewProducts()as $value) {
-                                 ?>
+                             <?php foreach ($product->getNewProducts() as $value) {?>
                                  <div class="col-sm-4">
                                      <div class="product-image-wrapper">
                                          <div class="single-products">
@@ -90,14 +88,14 @@
                                          </div>
                                      </div>
                                  </div>
-                             <?php } ?>
+                             <?php }?>
                          </div>
                          <!--features_items-->
                      </div>
                  </div>
         </section>
-         <?php require "./form/footer.php"; ?>
-         <?php require "./form/script.php"; ?>
+         <?php require "./form/footer.php";?>
+         <?php require "./form/script.php";?>
      </body>
 
      </html>

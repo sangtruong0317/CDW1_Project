@@ -13,7 +13,7 @@ class Product extends Db
     //Viet phuong thuc lay ra 3 sp moi nhat
     function getNewProducts()
     {
-        $sql = self::$connection->prepare("SELECT * FROM products WHERE products.Created_at ORDER by Created_at DESC LIMIT 1,6");
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE products.Created_at ORDER by Created_at DESC LIMIT 1,3");
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
