@@ -10,7 +10,7 @@ class Db
         }
         return self::$connection;
     }
-    //Hàm phân trang
+    //Viết hàm phân trang
     function paginate($url, $total, $page, $perPage)
     {
         $totalLinks = ceil($total / $perPage);

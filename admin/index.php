@@ -2,8 +2,8 @@
 <html lang="en">
 <?php require "./form/head.php"; ?>
 <?php
-$perPage = 6; 	//số lượng sản phẩm hiển thị trên 1 trang  
-$total = count($product->getAllProducts()); 	// Tính tổng số dòng
+$perPage = 6; 	//số lượng hiển thị sản phẩm trên 1 trang  
+$total = count($product->getAllProducts()); 	// Tổng số dòng
 ?>
 
 <body>
@@ -93,6 +93,13 @@ $total = count($product->getAllProducts()); 	// Tính tổng số dòng
                                     <?php }?>
                                 </tbody>
                             </table>
+                            <div class="row" style="margin-left: 18px;">
+                                <ul class="pagination">
+                                    <div class="active">
+                                        <?php echo $db->paginate($url,$total, $page, $perPage)?>
+                                    </div>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
