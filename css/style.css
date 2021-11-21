@@ -2507,3 +2507,39 @@ td.cart_total{
 .contact-info .social-networks ul li a:hover {
     color: #FE980F;
 }
+
+/* Slideshow */
+#slideshow {
+   overflow: hidden;
+   height: 250px;
+   width: 860px;
+   margin: 0 auto;
+ }
+.slide-wrapper {
+    width: 2670px;
+   -webkit-animation: slide 14s ease infinite;
+ }
+.slide {
+   float: left;
+   height: 250px;
+   width: 860px;
+   position: relative;
+ }
+ .img-slide{
+     height: 100%;
+     width: 100%;
+ }
+ @-webkit-keyframes slide {
+   0% {margin-left: 0px;}
+   10% {margin-left: 0px;}
+   20% {margin-left: -860px;}
+   30% {margin-left: -860px;}
+   40% {margin-left: -1730px;}
+   50% {margin-left: -1730px;}
+   60% {margin-left: -860px;}
+   70% {margin-left: -860px;}
+   80% {margin-left: 0px;}
+   90% {margin-left: 0px;}
+   100% {margin-left: 0px;}
+   
+ }
