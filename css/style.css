@@ -227,6 +227,10 @@ a#scrollUp i {
     padding-bottom: 30px;
 }
 
+.logo{
+    margin-left: -150px;
+}
+
 .logo_name{
     color: #fff700;
     font-size: 25px;
@@ -237,7 +241,9 @@ a#scrollUp i {
     padding-top: 20px;
     padding-left: 0;
 }
-
+.mainmenu{
+    margin-right: -245px;
+}
 .mainmenu ul li {
     padding-right: 15px;
     padding-left: 15px;
@@ -271,12 +277,12 @@ a#scrollUp i {
     border-radius: 10px;
     color: #B2B2B2;
     font-family: 'roboto';
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 300;
-    height: 35px;
+    height: 40px;
     outline: medium none;
     padding-left: 10px;
-    width: 155px;
+    width: 170px;
     background-image: url(../images/home/searchicon.png);
     background-repeat: no-repeat;
     background-position: 130px;
