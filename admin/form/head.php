@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if (!isset($_SESSION['admin_name'])){
+    echo "<script> alert('Vui l òng đăng nhập trước !!');window.location.href='../Login/index.php';</script>";
+}
 
 require "config.php";
 require "models/db.php";
