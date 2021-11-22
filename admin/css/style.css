@@ -1604,3 +1604,9 @@ div.dataTables_wrapper .ui-widget-header {
 .btn-mini{
 	background: #000;
 }
+
+/* Css form User */
+.tr-acc{
+	font-size: 15px;
+	text-align: center;
+}

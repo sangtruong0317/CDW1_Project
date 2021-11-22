@@ -127,6 +127,27 @@ if (isset($_GET['value'])) {
                                             <button type="submit" name="addProtype" class="btn btn-success">Thêm</button>
                                         </div>
                                     </form>
+                                <?php } else if ($value == "user") { ?>
+                                    <!-- BEGIN USER FORM -->
+                                    <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                        <div class="control-group">
+                                            <label class="control-label">Username:</label>
+                                            <div class="controls">
+                                                <input type="text" class="span11" placeholder="Username" name="name" required /> *
+                                            </div>
+                                            <label class="control-label">Password:</label>
+                                            <div class="controls">
+                                                <input type="password" class="span11" placeholder="password" name="name" required /> *
+                                            </div>
+                                            <label class="control-label">Pole:</label>
+                                            <div class="controls">
+                                                <input type="text" class="span11" placeholder="role" name="name" required /> *
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" name="addUser" class="btn btn-success">Thêm</button>
+                                        </div>
+                                    </form>
                                     <!-- END USER FORM -->
                                 <?php } ?>
                             </div>

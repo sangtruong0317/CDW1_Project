@@ -43,4 +43,12 @@ class User extends Db
              return false;
          }
     }
+
+    //Them user
+    function addUser($name,$password,$role){
+        $sql = self::$connection->prepare("INSERT INTO `users`(`name`, `password`, `role`)
+        VALUES (?,?,?)");
+        $sql->bind_param("ssi", $name,$password,$role);
+        $sql->execute();
+    }
 }

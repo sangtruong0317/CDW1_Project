@@ -20,25 +20,34 @@
                     <div class="widget-box">
                         <div class="widget-title"> <span class="icon"><a href="form.php"> <i class="icon-plus"></i>
                                 </a></span>
-                            <h5>Products</h5>
+                            <h5>User</h5>
                         </div>
                         <div class="widget-content nopadding">
-                            <table style="width:100%">
-                                <thead>
+                            <table class="table table-bordered table-striped">
+                                <thead style="height:50px;">
                                     <tr>
-                                        <th>User Id</th>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Role</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;">User Id</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;">Username</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;">Role</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="">
-                                        <td></td>
-                                        <td></td>
-                                        <td><input style="border:none;" type="password" name="" value="password" disabled id=""><td>
-                                        <td></td>
+                                <?php foreach($user->getAccount() as $value){?>
+                                    <tr class="tr-acc">
+                                        <td class="user-acc" style="text-align: center;"><?= $value['user_id']?></td>
+                                        <td class="user-acc" style="text-align: center;"><?= $value['name']?></td>
+                                        <td class="user-acc" style="text-align: center;"><?= $value['role']?></td>
+                                        <td>
+                                            <a href="form.php?value=user" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
+                                            <button type="button" class="btn btn-danger"  
+                                            data-toggle="modal" data-target="#delete"
+                                            style="margin: 0 20px 0 20px">
+                                                    Xóa <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
                                     </tr>
+                                    <?php }?>
                                 </tbody>
                             </table>
                             
