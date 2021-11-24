@@ -9,8 +9,8 @@ $product = new Product;
 $manufacture = new Manufacture;
 $protype = new Protype;
 
-    if (isset($_POST['submitDelete'])){
-        $id = $_POST['id'];    
+    if (isset($_GET['iddel'])&&($_GET['iddel']>0)){
+        $id = $_GET['iddel'];    
         $image = "";
         $path = "";
         foreach($product->getProductID($id) as $array){
