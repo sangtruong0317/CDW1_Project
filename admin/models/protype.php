@@ -26,7 +26,11 @@ class Protype extends Db
             return $items;
         }
     //update protype
-    
+    function updateProtype($id,$typeName){
+        $query = self::$connection->prepare("UPDATE protypes SET type_name = ? WHERE type_id = ?");
+        $query->bind_param("si",$typeName,$id);
+        return $query->execute();
+    }
     
     
 }
