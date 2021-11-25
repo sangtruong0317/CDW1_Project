@@ -41,5 +41,5 @@
         $password = $_POST['password'];
         $role = $_POST['role'];
         $user->addUser($name,$password,$role);
-        echo "<script>alert('Thêm thành công');window.location.href='user.php'</script>";
+        echo "<script>alert('Thêm thành công');window.location.href='users.php'</script>";
     }
