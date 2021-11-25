@@ -137,11 +137,11 @@ if (isset($_GET['value'])) {
                                             </div>
                                             <label class="control-label">Password:</label>
                                             <div class="controls">
-                                                <input type="password" class="span11" placeholder="password" name="name" required /> *
+                                                <input type="password" class="span11" placeholder="password" name="password" required /> *
                                             </div>
                                             <label class="control-label">Pole:</label>
                                             <div class="controls">
-                                                <input type="text" class="span11" placeholder="role" name="name" required /> *
+                                                <input type="text" class="span11" placeholder="role" name="role" required /> *
                                             </div>
                                         </div>
                                         <div class="form-actions">
