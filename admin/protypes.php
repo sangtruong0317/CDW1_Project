@@ -57,7 +57,7 @@ $total = count($protype->getAllProtype()); 	// Tính tổng số dòng
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($protype-> getAllProtypeByPage($page, $perPage) as $value){?>
+                                    <?php foreach($protype-> getAllProtype() as $value){?>
                                     <tr class="">
                                         <td><?php echo $value['type_id']?></td>
                                         <td><?php echo $value['type_name']?></td>

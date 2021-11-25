@@ -120,7 +120,7 @@ if (isset($_GET['value'])) {
                                         <div class="control-group">
                                             <label class="control-label">Tên loại sản phẩm :</label>
                                             <div class="controls">
-                                                <input type="text" class="span11" placeholder="Tên loại sản phẩm" name="name" required /> *
+                                                <input type="text" class="span11" placeholder="Tên loại sản phẩm" name="typename" required /> *
                                             </div>
                                         </div>
                                         <div class="form-actions">

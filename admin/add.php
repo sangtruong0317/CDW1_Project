@@ -32,7 +32,7 @@
         echo "<script>alert('Thêm thành công');window.location.href='manufactures.php'</script>";
     } if (isset($_POST['addProtype'])) {
 
-        $type_name = $_POST['name'];
+        $type_name = $_POST['typename'];
         $protype->addNewProtype($type_name);
         echo "<script>alert('Thêm thành công');window.location.href='protypes.php'</script>";
     }
