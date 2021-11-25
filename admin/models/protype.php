@@ -25,12 +25,8 @@ class Protype extends Db
             $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
             return $items;
         }
-    //update
-    function updateProtype($id,$typeName){
-        $query = self::$connection->prepare("UPDATE protypes SET type_name = ? WHERE type_id = ?");
-        $query->bind_param("si",$typeName,$id);
-        return $query->execute();
-    }
+    //update protype
+    
     
     
 }
