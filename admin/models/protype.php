@@ -15,7 +15,14 @@ class Protype extends Db
     
 
     //Viet phuong thuc xóa 1 protype
-
+    function delProtype($type_id)
+    {
+        $sql = self::$connection->prepare("DELETE
+    FROM protypes
+    WHERE type_id = ?");
+        $sql->bind_param("i", $type_id);
+        $sql->execute(); //return an object
+    }
     //lay id 
     function getProtypeID($id){
         $sql = self::$connection->prepare("SELECT * FROM protypes WHERE type_id = ?");
@@ -26,11 +33,7 @@ class Protype extends Db
             return $items;
         }
     //update
-    function updateProtype($id,$typeName){
-        $query = self::$connection->prepare("UPDATE protypes SET type_name = ? WHERE type_id = ?");
-        $query->bind_param("si",$typeName,$id);
-        return $query->execute();
-    }
+    
     
     
 }
