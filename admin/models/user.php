@@ -51,4 +51,11 @@ class User extends Db
         $sql->bind_param("ssi", $name,$password,$role);
         $sql->execute();
     }
+
+    //Xoa user
+    function delUser($id){
+        $sql = self::$connection->prepare("DELETE FROM users WHERE user_id = ?");
+        $sql->bind_param("i", $id);
+        $sql->execute();
+    }
 }

@@ -40,11 +40,7 @@
                                         <td class="user-acc" style="text-align: center;"><?= $value['role']?></td>
                                         <td>
                                             <a href="form.php?value=user" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
-                                            <button type="button" class="btn btn-danger"  
-                                            data-toggle="modal" data-target="#delete"
-                                            style="margin: 0 20px 0 20px">
-                                                    Xóa <i class="fas fa-trash-alt"></i>
-                                            </button>
+                                            <a href="delete.php?iddel=<?= $value['user_id']?>" class="btn btn-danger" style="margin: 0px 0px 0 100px">Xóa <i class="fas fa-plus-square"></i></a>
                                         </td>
                                     </tr>
                                     <?php }?>
