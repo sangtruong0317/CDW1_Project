@@ -64,6 +64,7 @@ $total = count($manufacture->getAllManufactures());     // Tính tổng số dò
                                             <td>
                                                 <a href="form.php?value=manufacture" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
                                                 <button type="button" class="btn btn-danger" 
+                                                onclick="deleteID(<?= $value['manu_id'] ?>)" 
                                                 data-toggle="modal" data-target="#delete"
                                                 style="margin: 0 20px 0 20px">
                                                     Xóa <i class="fas fa-trash-alt"></i>
