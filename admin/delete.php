@@ -48,6 +48,7 @@ $token = null;
     if(isset($_GET['iddel'])){
         $id = $_GET['iddel'];
         $token = $_GET['token'];
+        //kiem tra
         if ($token == $_SESSION['_token']) {
             $user->delUser($id);
             echo "<script>alert('Đã xóa');window.location.href='users.php'</script>";
