@@ -68,7 +68,7 @@ $total = count($protype->getAllProtype()); 	// Tính tổng số dòng
                                             style="margin: 0 20px 0 20px">
                                                     Xóa <i class="fas fa-trash-alt"></i>
                                             </button>
-                                            <a href="edit.php?idProtype=<?= $value['type_id'] ?>&editProtype" class="btn btn-success">Sửa <i class="far fa-edit"></i></a>
+                                            <!-- <a href="edit.php?idProtype=<?= $value['type_id'] ?>&editProtype" class="btn btn-success">Sửa <i class="far fa-edit"></i></a> -->
                                         </td>
                                     </tr>
                                 </tbody>
