@@ -14,7 +14,7 @@ $token = md5(rand(0, 9999999) . "TeamG");
         <div id="content-header">
             <div id="breadcrumb"> <a href="index.php" title="Go to Home" class="tip-bottom current"><i
                         class="icon-home"></i> Home</a></div>
-            <h1>Manage User</h1>
+            <h1>Quản lý User</h1>
         </div>
         <div class="container-fluid">
             <hr>
