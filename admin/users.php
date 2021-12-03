@@ -18,27 +18,28 @@
             <div class="row-fluid">
                 <div class="span12">
                     <div class="widget-box">
-                        <div class="widget-title"> <span class="icon"><a href="form.php"> <i class="icon-plus"></i>
+                        <div class="widget-title"> <span class="icon"><a href="form.php?value=user"> <i class="icon-plus"></i>
                                 </a></span>
-                            <h5>Products</h5>
+                            <h5>User</h5>
                         </div>
                         <div class="widget-content nopadding">
-                            <table style="width:100%">
-                                <thead>
+                            <table class="table table-bordered table-striped">
+                                <thead style="height:50px;">
                                     <tr>
-                                        <th>User Id</th>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Role</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;">User Id</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;">Username</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;">Role</th>
+                                        <th class="th-user" style="padding: 10px;font-size: 17px;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="">
-                                        <td></td>
-                                        <td></td>
-                                        <td><input style="border:none;" type="password" name="" value="password" disabled id=""><td>
-                                        <td></td>
+                                <?php foreach($user->getAccount() as $value){?>
+                                    <tr class="tr-acc">
+                                        <td class="user-acc" style="text-align: center;"><?= $value['user_id']?></td>
+                                        <td class="user-acc" style="text-align: center;"><?= $value['name']?></td>
+                                        <td class="user-acc" style="text-align: center;"><?= $value['role']?></td>
                                     </tr>
+                                    <?php }?>
                                 </tbody>
                             </table>
                             
