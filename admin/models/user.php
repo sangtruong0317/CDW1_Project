@@ -51,11 +51,21 @@ class User extends Db
         $sql->bind_param("ssi", $name,$password,$role);
         $sql->execute();
     }
+    
+    //Sua thong tin user
+    function updateUser($id,$name,$password,$role){
+        $query= self::$connection->prepare("UPDATE users SET name = ?,password = ?,role = ? WHERE user_id = ? ");
+        $query->bind_param("ssii",$name,$password,$role,$id);
+        return $query->execute();
+    }
 
-    //Xoa user
-    function delUser($id){
-        $sql = self::$connection->prepare("DELETE FROM users WHERE user_id = ?");
-        $sql->bind_param("i", $id);
-        $sql->execute();
+    //lay user bang id
+    function getUserID($id){
+        $sql = self::$connection->prepare("SELECT * FROM users WHERE user_id = ?");
+            $sql->bind_param("i", $id);
+            $sql->execute(); //return an object
+            $items = array();
+            $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+            return $items;
     }
 }
