@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "config.php";
 require "models/db.php";
 require "models/product.php";
@@ -10,6 +11,7 @@ $product = new Product;
 $manufacture = new Manufacture;
 $protype = new Protype;
 $user = new User;
+$token = null;
 
     if (isset($_POST['submitDelete'])){
         $id = $_POST['id'];    
@@ -45,8 +47,14 @@ $user = new User;
 
     if(isset($_GET['iddel'])){
         $id = $_GET['iddel'];
-        $user->delUser($id);
-        echo "<script>alert('Xóa thành công');window.location.href='users.php'</script>";;
+        $token = $_GET['token'];
+        if ($token == $_SESSION['_token']) {
+            $user->delUser($id);
+            echo "<script>alert('Đã xóa');window.location.href='users.php'</script>";
+        }
+        else{
+            echo "<script>alert('Khong xao duoc');window.location.href='users.php'</script>";
+        }
     }
 ?>
 <!-- <script>
