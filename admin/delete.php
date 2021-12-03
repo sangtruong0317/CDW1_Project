@@ -1,13 +1,17 @@
 <?php
+session_start();
 require "config.php";
 require "models/db.php";
 require "models/product.php";
 require "models/manufacture.php";
 require "models/protype.php";
+require "models/user.php";
 $db = new Db;
 $product = new Product;
 $manufacture = new Manufacture;
 $protype = new Protype;
+$user = new User;
+$token = null;
 
     if (isset($_GET['iddel'])&&($_GET['iddel']>0)){
         $id = $_GET['iddel'];    
@@ -38,6 +42,18 @@ $protype = new Protype;
         } else {
             $protype->delProtype($type_id);
             echo "<script>alert('Đã xóa.');window.location.href='protypes.php'</script>";
+        }
+    }
+
+    if(isset($_GET['iddel'])){
+        $id = $_GET['iddel'];
+        $token = $_GET['token'];
+        if ($token == $_SESSION['_token']) {
+            $user->delUser($id);
+            echo "<script>alert('Đã xóa');window.location.href='users.php'</script>";
+        }
+        else{
+            echo "<script>alert('Khong xao duoc');window.location.href='users.php'</script>";
         }
     }
 ?>

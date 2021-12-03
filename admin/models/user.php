@@ -46,9 +46,17 @@ class User extends Db
 
     //Them user
     function addUser($name,$password,$role){
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $sql = self::$connection->prepare("INSERT INTO `users`(`name`, `password`, `role`)
         VALUES (?,?,?)");
         $sql->bind_param("ssi", $name,$password,$role);
+        $sql->execute();
+    }
+
+    //Xoa user
+    function delUser($id){
+        $sql = self::$connection->prepare("DELETE FROM users WHERE user_id = ?");
+        $sql->bind_param("i", $id);
         $sql->execute();
     }
 }
