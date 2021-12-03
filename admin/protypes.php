@@ -44,8 +44,13 @@ $total = count($protype->getAllProtype()); 	// Tính tổng số dòng
             <div class="row-fluid">
                 <div class="span12">
                     <div class="widget-box">
-                        <div class="widget-title"><span class="icon"> <i class="icon-align-justify"></i> </span>
-                            <h5>Sản Phẩm</h5> <a href="form.php?value=protype" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
+                        <div class="widget-title">
+                            <span class="icon"> 
+                                <a href="form.php?value=manufacture">
+                                    <i class="icon-plus"></i>
+                                </a>
+                            </span>
+                            <h5>Loại Sản Phẩm</h5>
                         </div>
                         <div class="widget-content nopadding">
                             <table class="table table-bordered table-striped">

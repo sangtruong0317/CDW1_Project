@@ -44,7 +44,11 @@ $total = count($manufacture->getAllManufactures());     // Tính tổng số dò
             <div class="row-fluid">
                 <div class="span12">
                     <div class="widget-box">
-                        <div class="widget-title"><span class="icon"> <i class="icon-align-justify"></i> </span>
+                        <div class="widget-title">
+                            <span class="icon"> 
+                                <a href="form.php?value=manufacture"> <i class="icon-plus"></i>
+                                </a>
+                            </span>
                             <h5>Hãng</h5>
                         </div>
                         <div class="widget-content nopadding">
@@ -62,7 +66,7 @@ $total = count($manufacture->getAllManufactures());     // Tính tổng số dò
                                             <td><?php echo $value['manu_id'] ?></td>
                                             <td><?php echo $value['manu_name'] ?></td>
                                             <td>
-                                                <a href="form.php?value=manufacture" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
+                                                <!-- <a href="form.php?value=manufacture" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a> -->
                                                 <button type="button" class="btn btn-danger" 
                                                 onclick="deleteID(<?= $value['manu_id'] ?>)" 
                                                 data-toggle="modal" data-target="#delete"
