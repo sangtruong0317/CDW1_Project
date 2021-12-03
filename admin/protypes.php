@@ -46,7 +46,7 @@ $total = count($protype->getAllProtype()); 	// Tính tổng số dòng
                     <div class="widget-box">
                         <div class="widget-title">
                             <span class="icon"> 
-                                <a href="form.php?value=manufacture">
+                                <a href="form.php?value=protype">
                                     <i class="icon-plus"></i>
                                 </a>
                             </span>
