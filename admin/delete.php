@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "config.php";
 require "models/db.php";
 require "models/product.php";
@@ -12,8 +13,8 @@ $protype = new Protype;
 $user = new User;
 $token = null;
 
-    if (isset($_GET['iddel'])&&($_GET['iddel']>0)){
-        $id = $_GET['iddel'];    
+    if (isset($_POST['submitDelete'])){
+        $id = $_POST['id'];   
         $image = "";
         $path = "";
         foreach($product->getProductID($id) as $array){
@@ -53,7 +54,7 @@ $token = null;
             echo "<script>alert('Đã xóa');window.location.href='users.php'</script>";
         }
         else{
-            echo "<script>alert('Khong xao duoc');window.location.href='users.php'</script>";
+            echo "<script>alert('Không xóa được');window.location.href='users.php'</script>";
         }
     }
 ?>
