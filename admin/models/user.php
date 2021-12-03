@@ -57,6 +57,8 @@ class User extends Db
         $query->bind_param("ssii",$name,$password,$role,$id);
         return $query->execute();
     }
+
+    //lay user bang id
     function getUserID($id){
         $sql = self::$connection->prepare("SELECT * FROM users WHERE user_id = ?");
             $sql->bind_param("i", $id);
