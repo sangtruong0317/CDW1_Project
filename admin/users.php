@@ -1,10 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php require "./form/head.php"; 
-
-$token = md5(rand(0, 9999999) . "TeamG");
-?>
+<?php require "./form/head.php"; ?>
 <body>
     <?php require "./form/header_part.php"; ?>
     <?php require "./form/topHeaderMenu.php"; ?>
@@ -41,14 +38,6 @@ $token = md5(rand(0, 9999999) . "TeamG");
                                         <td class="user-acc" style="text-align: center;"><?= $value['user_id']?></td>
                                         <td class="user-acc" style="text-align: center;"><?= $value['name']?></td>
                                         <td class="user-acc" style="text-align: center;"><?= $value['role']?></td>
-                                        <td>
-                                        <a href="delete.php?iddel=<?= $value['user_id']?> & token=<?php echo $token?>" class="btn btn-danger" style="margin: 0px 0px 0 100px">
-                                            Xóa <i class="fas fa-plus-square"></i>
-                                            <?php
-                                            $_SESSION['_token'] = $token;
-                                            ?>
-                                        </a>
-                                        </td>
                                     </tr>
                                     <?php }?>
                                 </tbody>

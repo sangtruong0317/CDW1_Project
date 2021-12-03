@@ -139,7 +139,7 @@ if (isset($_GET['value'])) {
                                             <div class="controls">
                                                 <input type="password" class="span11" placeholder="password" name="password" required /> *
                                             </div>
-                                            <label class="control-label">Role:</label>
+                                            <label class="control-label">Pole:</label>
                                             <div class="controls">
                                                 <input type="text" class="span11" placeholder="role" name="role" required /> *
                                             </div>
