@@ -18,7 +18,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <div class="widget-box">
-                        <div class="widget-title"> <span class="icon"><a href="form.php"> <i class="icon-plus"></i>
+                        <div class="widget-title"> <span class="icon"><a href="form.php?value=user"> <i class="icon-plus"></i>
                                 </a></span>
                             <h5>User</h5>
                         </div>
@@ -38,10 +38,6 @@
                                         <td class="user-acc" style="text-align: center;"><?= $value['user_id']?></td>
                                         <td class="user-acc" style="text-align: center;"><?= $value['name']?></td>
                                         <td class="user-acc" style="text-align: center;"><?= $value['role']?></td>
-                                        <td>
-                                            <a href="form.php?value=user" class="btn btn-primary" style="margin: 0px 0px 0 100px">Thêm <i class="fas fa-plus-square"></i></a>
-                                            <a href="delete.php?iddel=<?= $value['user_id']?>" class="btn btn-danger" style="margin: 0px 0px 0 100px">Xóa <i class="fas fa-plus-square"></i></a>
-                                        </td>
                                     </tr>
                                     <?php }?>
                                 </tbody>
