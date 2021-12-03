@@ -72,16 +72,16 @@ $total = count($manufacture->getAllManufactures());     // Tính tổng số dò
                                                 <a href="edit.php?idManu=<?= $value['manu_id'] ?>&editManu" class="btn btn-success">Sửa <i class="far fa-edit"></i></a>
                                             </td>
                                         </tr>
-                                    <?php } ?>
+                                        <?php } ?>
                                 </tbody>
                             </table>
-                            <!-- <div class="row" style="margin-left: 18px;">
+                             <div class="row" style="margin-left: 18px;">
                                 <ul class="pagination">
                                     <div class="active">
-                                        <?php echo $db->paginate($url, $total, $page, $perPage) ?>
+                                    <?php echo $db->paginate($url, $total, $page, $perPage) ?>
                                     </div>
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -38,9 +38,10 @@
                             <?php else:?>
                             <section style="margin-top: 1px; font-size: 16px;font-weight: bold;">
                             <i class="fas fa-user-tie"></i> : <span style="padding-right: 12px; color:yellow"><?=$_SESSION['customer_name']?></span>
-                                <a style="font-size:12px; margin-bottom:-20px" href="./Login/index.php">
-                                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
-                                </a>
+                                <?php unset($_SESSION['customer_name'])?>
+                                <a style="font-size:12px; margin-bottom:-20px" href='../index.php'>
+                                <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                            </a>
                             </section>
                             <?php endif;?>
                         </li>
