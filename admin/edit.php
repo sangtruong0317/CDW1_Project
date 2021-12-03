@@ -126,6 +126,31 @@ require "./form/head.php";
                                     </div>
                                 </div>
                              </form><?php }}?>
+                             <?php
+                             if(isset($_GET['editUser']) && isset($_GET['idUser'])){
+                                $id = $_GET['idUser'];                                  
+                                    foreach($user->getUserID($id) as $value);{
+                            ?>
+                            <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                    <div class="control-group">
+                                        <label class="control-label">Username:</label>
+                                        <div class="controls">
+                                        <input type="hidden" value="<?= $value['user_id'] ?> " name="id">
+                                            <input type="text" class="span11" placeholder="Username" name="name" value="<?= $value['name'] ?>" required /> *
+                                        </div>
+                                        <label class="control-label">Password:</label>
+                                        <div class="controls">
+                                            <input type="password" class="span11" placeholder="password" name="password" value="<?= $value['password'] ?>" required /> *
+                                        </div>
+                                        <label class="control-label">Role:</label>
+                                        <div class="controls">
+                                            <input type="text" class="span11" placeholder="role" name="role" value="<?= $value['role'] ?>" required /> *
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" name="editUser" class="btn btn-success">Cập nhật</button>
+                                    </div>
+                            </form><?php }}?>
                             <div class="row" style="margin-left: 18px;">
                                 <ul class="pagination">
                                     <div class="active">
