@@ -28,9 +28,10 @@ class Protype extends Db
     //Viet phuong thêm 1 protype
     function addNewProtype($type_name)
     {
+        $input=mysqli_escape_string(self::$connection,$type_name);
         $sql = self::$connection->prepare("INSERT INTO `protypes`(`type_name`) 
         VALUES (?)");
-        $sql->bind_param("s", $type_name);
+        $sql->bind_param("s", $input);
         $sql->execute(); //return an object
     }
 
