@@ -42,7 +42,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id']) || isset($_GET['brands'])
                                     <h4 style="color:#365d6c">Lọc sản phẩm</h4>
                                     <hr style="margin-top:-8px;border-top: 3px solid #eee;">
                                     <?php
-                                    $con = mysqli_connect("localhost","root","","demo","3308",'utf8');
+                                    $con = mysqli_connect("localhost","root","","nhomg","3308",'utf8');
                                     mysqli_set_charset($con, 'UTF8');
                                     $brand_query = "SELECT * FROM manufactures";
                                     $brand_query_run = mysqli_query($con,$brand_query);
