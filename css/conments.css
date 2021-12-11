@@ -19,8 +19,8 @@ body {
 
 .wrapper {
     padding: 20px;
-    background: #0098DB;
-    border: 1px solid #FF99FF;
+    background: #8080801f;
+    border: 1px solid #8f8888;
     width: 90%;
     min-height: 400px;
     margin: 20px 0;
@@ -62,7 +62,7 @@ body {
     padding: .7rem 2rem;
     opacity: .8;
     color: #FFF;
-    background: #FF99FF;
+    background: #1547eb;
     border: none;
     outline: none;
     border-radius: 3px;
@@ -78,7 +78,7 @@ body {
 .wrapper .form .input-group input, .wrapper .form .input-group textarea {
     width: 100%;
     height: 100%;
-    border: 1px solid #FF99FF;
+    border: 1px solid #8f8888;
     outline: none;
     padding: 5px 10px;
 }
@@ -97,7 +97,7 @@ body {
 
 .wrapper .prev-comments .single-item {
     background: #FFF;
-    border: 1px solid #FF99FF;
+    border: 1px solid #8f8888;
     padding: 10px 20px;
     text-align: left;
     margin-bottom: 25px;
@@ -120,4 +120,7 @@ body {
 .wrapper .prev-comments .single-item p {
     font-size: .9rem;
     color: #111;
+}
+.user_info input, select, textarea{
+    background-color: white;
 }
