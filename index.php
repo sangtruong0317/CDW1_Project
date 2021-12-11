@@ -118,7 +118,7 @@ $url = $_SERVER['PHP_SELF'];
                      </div>
                  </div>
          </section>
-         <?php require "./comments.php";?>
+ 
          <?php require "./form/footer.php";?>
          <?php require "./form/script.php";?>
      </body>
