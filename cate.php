@@ -35,7 +35,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id']) || isset($_GET['brands'])
                             </div>
                         </div>
                     </div>
-                    <div class="filter_products">
+                    <div class="filter_products" style="padding-top: 30px;">
                         <form action="" method="GET">
                             <div class="filter_manu">
                                 <div class="card-filter-body">
@@ -92,7 +92,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id']) || isset($_GET['brands'])
                                 ?>
                                 </div>
                                 <div class="card-filter-bottom">
-                                    <button type="submit" class="btn-filter btn-primary">Tìm</button>
+                                    <button type="submit" class="btn-filter btn-primary" style="padding: 5px 21px; border: none; margin-top: 15px; font-size: 15px;">Tìm</button>
                                 </div>
 
                             </div>
