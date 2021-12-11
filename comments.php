@@ -38,15 +38,14 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 				<div class="input-group">
 					<label for="name">Name</label>
 					<input type="text" name="name" id="name" placeholder="Enter your Name" required>
-				</div>
-				<div class="input-group">
 					<label for="email">Email</label>
 					<input type="email" name="email" id="email" placeholder="Enter your Email" required>
 				</div>
 			</div>
 			<div class="input-group textarea">
-				<label for="comment">Comment</label>
-				<textarea id="comment" name="comment" placeholder="Enter your Comment" required></textarea>
+			<textarea id="comment" name="comment" placeholder="Enter your Comment" required="" style="
+    margin-top: 65px;
+"></textarea>
 			</div>
 			<div class="input-group">
 				<button name="submit" class="btn">Post Comment</button>

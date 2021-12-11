@@ -57,13 +57,10 @@ if (isset($_GET['id'])) {
                                 <p><b>Tình trạng hàng:</b> còn hàng</p>
                                 <p><b>Thương hiệu:</b> <?php echo $value['manu_name'] ?></p>
                                 <!--/product-information-->
+                               
                             </div>
-                            <div class="raty"><span class="rating" data-rating="5" data-id="170995"><a href="#"
-                                        class="fa-star fa"></a><a href="#" class="fa-star fa"></a><a href="#"
-                                        class="fa-star fa"></a><a href="#" class="fa-star fa"></a><a href="#"
-                                        class="fa-star fa"></a><a href="#"></a><a href="#"></a><a href="#"></a><a
-                                        href="#"></a><a href="#"></a></span></div>
-                        </div>
+                            <?php require "./comments.php";?>
+                            
 
                         <!--/product-details-->
                         <!--features_items-->
@@ -71,7 +68,7 @@ if (isset($_GET['id'])) {
 
                 </div>
     </section>
-    <?php require "./comments.php";?>
+    
     <?php require "./form/footer.php"; ?>
     <?php require "./form/script.php"; ?>
 </body>
