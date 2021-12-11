@@ -49,7 +49,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id']) || isset($_GET['brands'])
                                     
                                     $pro_query = "SELECT * FROM protypes";
                                     $pro_query_run = mysqli_query($con,$pro_query);
-                                    if(mysqli_num_rows($pro_query_run) > 0 && mysqli_num_rows($brand_query_run)){
+                                    if(mysqli_num_rows($brand_query_run) > 0 && mysqli_num_rows($pro_query_run)>0){
                                         ?> <h5 style="color: #9449a7;width: 32%;border-bottom: 3px double #b1b8cfee;">
                                         Thương hiệu</h5> <?php
                                     foreach($brand_query_run as $brandList){
@@ -180,7 +180,7 @@ if (isset($_GET['manu_id']) || isset($_GET['type_id']) || isset($_GET['brands'])
                                 {
                                     // echo $rowbrand;
                                     
-                                    $products = "SELECT * FROM products WHERE type_id IN ($rowbrand)";
+                                    $products = "SELECT * FROM products WHERE manu_id IN ($rowbrand)";
                                     $products_run = mysqli_query($con, $products);
                                     if(mysqli_num_rows($products_run) > 0)
                                     {
