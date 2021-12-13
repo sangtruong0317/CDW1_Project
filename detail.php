@@ -51,7 +51,10 @@ if (isset($_GET['id'])) {
                                         <button style="background-color: orange;
                                         padding: 10px;
                                         border-radius: 5px;" name="cart" type="submit"><i
-                                                class="fa fa-shopping-cart"></i>Thêm vào giỏ</button><br>
+                                                class="fa fa-shopping-cart"></i>Thêm vào giỏ</button>
+                                                <button style="margin-left: 20px; background-color: #ff00992b;
+                                        padding: 10px;
+                                        border-radius: 5px;" name="wishlist" type="submit"><i class="fas fa-heart"></i> Yêu thích</button><br>
                                     </form>
                                 </span>
                                 <p><b>Tình trạng hàng:</b> còn hàng</p>
@@ -84,6 +87,14 @@ if (isset($_GET['id'])) {
                                             $_SESSION['cart'][$id] = $num - 1;
                                         }
                                         echo "<script>window.location.href='cart.php'</script>";
+                                    }
+                                    elseif (isset($_POST['wishlist'])) {
+                                        $num = $_POST['num'];
+                                        $id = $_SESSION['last_id'];
+                                        if (is_numeric($num)) {
+                                            $_SESSION['wishlist'][$id] = $num - 1;
+                                        }
+                                        echo "<script>window.location.href='wishlist.php'</script>";
                                     }
                                 } else {
                                     header("location:index.php");
